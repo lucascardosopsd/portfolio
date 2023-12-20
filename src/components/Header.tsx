@@ -2,6 +2,7 @@ import { navLinks } from "@/constants";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import { Phone } from "lucide-react";
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
       <Link href="/">
         <h5 className="text-purple text-xl font-semibold">Lucas Cardoso</h5>
       </Link>
-      <nav>
+      <nav className="flex items-center gap-12 max-tablet:hidden">
         <ul className="flex items-center gap-8">
           {navLinks.map((link, index) => (
             <li key={index}>
@@ -25,6 +26,7 @@ const Header = () => {
           </Link>
         </ul>
       </nav>
+      <MobileMenu />
     </header>
   );
 };
