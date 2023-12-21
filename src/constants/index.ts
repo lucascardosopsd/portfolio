@@ -173,6 +173,64 @@ export const portfolios = [
   },
 ];
 
+export const techs = [
+  {
+    id: 0,
+    title: "Typescript",
+    logo: "/images/typescript-logo.png",
+  },
+  {
+    id: 1,
+    title: "React",
+    logo: "/images/react-logo.png",
+  },
+  {
+    id: 2,
+    title: "Node.js",
+    logo: "/images/node-logo.png",
+  },
+  {
+    id: 3,
+    title: "Nextjs",
+    logo: "/images/next-logo.png",
+  },
+  {
+    id: 4,
+    title: "Tailwnd",
+    logo: "/images/tailwind-logo.png",
+  },
+  {
+    id: 5,
+    title: "PrismaORM",
+    logo: "/images/prisma-logo.png",
+  },
+  {
+    id: 6,
+    title: "PostgreSQL",
+    logo: "/images/posgres-logo.png",
+  },
+  {
+    id: 7,
+    title: "MongoDB",
+    logo: "/images/mongodb-logo.png",
+  },
+  {
+    id: 8,
+    title: "Framer Motion",
+    logo: "/images/framer-motion.png",
+  },
+  {
+    id: 9,
+    title: "Express",
+    logo: "/images/express-logo.png",
+  },
+  {
+    id: 10,
+    title: "Git/Github",
+    logo: "/images/git-logo.png",
+  },
+];
+
 export const faqs = [
   {
     id: 1,
