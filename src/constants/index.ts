@@ -35,7 +35,7 @@ export const skills = [
   },
   {
     id: 3,
-    name: "User Experiênce",
+    name: "UX Designer",
     description:
       "Elaboração de fluxo de uso da aplicação sempre visando a melhor experiência do usuário",
     icon: "/icons/service-3.svg",
