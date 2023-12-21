@@ -1,4 +1,5 @@
 import { Linkedin, Mail, MapPin, Phone, PhoneIcon } from "lucide-react";
+import { SlDirections, SlFrame, SlNote, SlPeople } from "react-icons/sl";
 
 export const navLinks = [
   {
@@ -23,29 +24,36 @@ export const skills = [
     id: 1,
     name: "Desenvolvedor Fullstack",
     description:
-      "Desenvolvimento de aplicações web com as stacks mais modernas do mercado através de Typescript, do front-end ao back-end",
-    icon: "/icons/service-1.svg",
+      "Desenvolvimento de aplicações web com as stacks mais modernas do mercado através de Typescript, do front-end ao back-end, ou seja, sua aplicação fica pronta desde o que o usuário vê até a lógica do servidor.",
+    icon: SlDirections,
   },
   {
     id: 2,
     name: "UI Designer",
     description:
-      "Design de interfaces modernas utilizando Figma, visando os aspectos mais atuais do design",
-    icon: "/icons/service-2.svg",
+      "Design de interfaces modernas, visando os aspectos mais atuais do design para não passar a ideia de que você é amador.",
+    icon: SlNote,
   },
   {
     id: 3,
     name: "UX Designer",
     description:
-      "Elaboração de fluxo de uso da aplicação sempre visando a melhor experiência do usuário",
-    icon: "/icons/service-3.svg",
+      "Elaboração de fluxo de uso da aplicação sempre visando a melhor experiência do usuário, pois ninguém merece um site cheio de problemas de usabilidade.",
+    icon: SlPeople,
   },
   {
     id: 4,
     name: "Responsividade",
     description:
-      "Criação de aplicações que servem a qualquer tamanho de tela, do mobile ao desktop",
-    icon: "/icons/service-4.svg",
+      "Criação de aplicações que servem a qualquer tamanho de tela, do mobile ao desktop, pois não podemos ficar presos a um formato em um mundo tecnologicamente diversificado.",
+    icon: SlFrame,
+  },
+  {
+    id: 5,
+    name: "Código Fonte Como Ativo",
+    description:
+      "O código do site ou aplicação é como um ativo para a empresa, portanto é importante ser dono de fato do seu site e não uma empresa de criação de sites online. Por isso te entrego código e não um site feito de arrasa e solta.",
+    icon: SlFrame,
   },
 ];
 export const benefits = [
