@@ -1,5 +1,6 @@
-import { ArrowRight, Link, Phone } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -18,7 +19,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-2 mt-4 tablet:justify-start">
+        <div className="flex gap-2 mt-4 tablet:justify-start">
           <Link href="/portfolio" className="btn btn-primary">
             Portfolio
             <ArrowRight size={16} />
