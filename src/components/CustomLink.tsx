@@ -2,13 +2,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-interface NavLinkProps {
+interface CustomLinkProps {
   href: string;
   label: string;
   classname?: string;
 }
 
-const NavLink = ({ href, label, classname }: NavLinkProps) => {
+const CustomLink = ({ href, label, classname }: CustomLinkProps) => {
   const pathName = usePathname();
 
   return (
@@ -25,4 +25,4 @@ const NavLink = ({ href, label, classname }: NavLinkProps) => {
   );
 };
 
-export default NavLink;
+export default CustomLink;

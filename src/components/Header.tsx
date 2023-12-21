@@ -1,6 +1,6 @@
 import { navLinks } from "@/constants";
 import Link from "next/link";
-import NavLink from "./NavLink";
+import NavLink from "./CustomLink";
 import { Phone } from "lucide-react";
 import MobileMenu from "./MobileMenu";
 
