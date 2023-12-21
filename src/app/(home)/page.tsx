@@ -1,12 +1,13 @@
 import { ArrowRight, Phone } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     // Hero Section
-    <section className="flex items-center max-width flex-col-reverse tablet:flex-row mb-10">
+    <section className="flex items-center justify-center max-width flex-col-reverse tablet:flex-row space-x-4 my-4">
       {/* Left */}
-      <div className="tablet:w:2/3 mt-10 tablet:mt-0">
+      <div className="flex-1 tablet:w:2/3 mt-10 tablet:mt-0">
         <div className="flex flex-col gap-3 items-center tablet:items-start max-w-2xl text-center tablet:text-left">
           <p className="px-4 py-2 bg-peach-500 text-grey-600 w-max rounded">
             Olá 👋
@@ -32,6 +33,18 @@ export default function Home() {
         </div>
       </div>
       {/* Right */}
+      <div className="flex flex-1">
+        <div className="relative w-full h-full my-auto">
+          <div className="absolute bottom-0 w-full h-1/4 z-10 bg-gradient-to-t from-peach-600 to-transparent" />
+          <Image
+            src="/images/me.png"
+            alt="Foto Desenvolvedor"
+            height={400}
+            width={400}
+            className="h-[400px] tablet:h-[600px] w-auto mx-auto"
+          />
+        </div>
+      </div>
     </section>
   );
 }
