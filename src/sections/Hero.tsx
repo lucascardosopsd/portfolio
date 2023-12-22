@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <section
-      className="flex items-center justify-center max-width flex-col-reverse tablet:flex-row space-x-4 my-4"
+      className="flex items-center justify-center max-width flex-col-reverse tablet:flex-row space-x-4 my-4 pt-20"
       id="hero"
       ref={ref}
     >

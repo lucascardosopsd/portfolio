@@ -45,7 +45,7 @@ const MobileMenu = () => {
         <nav className="flex flex-col items-center justify-center flex-1 gap-10">
           <ul className="flex flex-col gap-5">
             {navLinks.map((link, index) => (
-              <li key={index + link.label}>
+              <li key={index + link.label} onClick={toggle}>
                 <NavLink
                   href={link.url}
                   label={link.label}
