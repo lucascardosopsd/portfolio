@@ -17,7 +17,7 @@ const CTA = () => {
       }}
       transition={{ duration: 0.5, delay: 0.5 }}
     >
-      <div className="flex flex-col tablet:flex-row gap-4 justify-center items-center">
+      <div className="flex flex-col gap-4 justify-center items-center">
         <SectionHeading
           title="Vamos fechar negócio?"
           subtitle="Você pode ter um site como este ou até mesmo uma aplicação mais robusta, basta clicar no botão azul ou enviar um e-mail para o endereço abaixo."
