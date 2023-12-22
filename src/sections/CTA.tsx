@@ -22,9 +22,17 @@ const CTA = () => {
           title="Vamos fechar negócio?"
           subtitle="Você pode ter um site como este ou até mesmo uma aplicação mais robusta, basta clicar no botão azul ou enviar um e-mail para o endereço abaixo."
         />
-        <span className="text-purple">
+        <motion.div
+          className="text-purple"
+          initial={{ translateY: 0 }}
+          animate={{ translateY: 10 }}
+          transition={{
+            repeat: Infinity,
+            duration: 1,
+          }}
+        >
           <SlArrowDown />
-        </span>
+        </motion.div>
       </div>
     </motion.div>
   );
