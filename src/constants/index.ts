@@ -24,6 +24,10 @@ export const navLinks = [
     label: "Portfólio",
     url: "#portfolio",
   },
+  {
+    label: "Tecnologias",
+    url: "#techs",
+  },
 ];
 export const skills = [
   {
@@ -148,11 +152,11 @@ export const techs = [
   {
     id: 3,
     title: "Nextjs",
-    logo: "/images/next-logo.png",
+    logo: "/images/next-logo.svg",
   },
   {
     id: 4,
-    title: "Tailwnd",
+    title: "Tailwind",
     logo: "/images/tailwind-logo.png",
   },
   {
@@ -168,12 +172,12 @@ export const techs = [
   {
     id: 7,
     title: "MongoDB",
-    logo: "/images/mongodb-logo.png",
+    logo: "/images/mongodb-logo.svg",
   },
   {
     id: 8,
     title: "Framer Motion",
-    logo: "/images/framer-motion.png",
+    logo: "/images/framer-motion.svg",
   },
   {
     id: 9,

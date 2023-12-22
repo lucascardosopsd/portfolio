@@ -3,6 +3,7 @@ import Hero from "../../sections/Hero";
 import Benefits from "@/sections/Benefits";
 import Portfolio from "@/sections/Portfolio";
 import CTA from "@/sections/CTA";
+import Techs from "@/sections/techs";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Skills />
       <Benefits />
       <Portfolio />
+      <Techs />
       <CTA />
     </>
   );
