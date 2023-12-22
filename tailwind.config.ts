@@ -9,6 +9,9 @@ const config: Config = {
         tablet: "1040px",
         desktop: "1620px",
       },
+      boxShadow: {
+        custom: "10px 10px 30px -15px rgba(23, 23, 23, 0.4)",
+      },
       colors: {
         white: "#ffffff",
         black: "#000000",

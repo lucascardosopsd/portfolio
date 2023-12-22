@@ -98,92 +98,34 @@ export const portfolios = [
   {
     id: 1,
     title: "Z - Aura Perfume Website",
+    description:
+      "Et nisi voluptate nulla ea mollit excepteur culpa. Labore non labore nostrud amet exercitation ad do enim laborum ea quis nulla. Mollit magna amet sunt tempor. Sunt tempor cupidatat mollit velit velit sint aliqua cillum id. Aliquip aliqua qui anim sunt.",
     link: "#",
-    images: [
-      "/images/portfolio-1.png",
-      "/images/portfolio-2.png",
-      "/images/portfolio-3.png",
-    ],
+    image: "/images/UI.png",
   },
   {
     id: 2,
     title: "Forhelp Charity Website",
+    description:
+      "Et nisi voluptate nulla ea mollit excepteur culpa. Labore non labore nostrud amet exercitation ad do enim laborum ea quis nulla. Mollit magna amet sunt tempor. Sunt tempor cupidatat mollit velit velit sint aliqua cillum id. Aliquip aliqua qui anim sunt.",
     link: "#",
-    images: [
-      "/images/portfolio-2.png",
-      "/images/portfolio-3.png",
-      "/images/portfolio-1.png",
-    ],
+    image: "/images/UI.png",
   },
   {
     id: 3,
     title: "Skill Bridge Website",
+    description:
+      "Et nisi voluptate nulla ea mollit excepteur culpa. Labore non labore nostrud amet exercitation ad do enim laborum ea quis nulla. Mollit magna amet sunt tempor. Sunt tempor cupidatat mollit velit velit sint aliqua cillum id. Aliquip aliqua qui anim sunt.",
     link: "#",
-    images: [
-      "/images/portfolio-3.png",
-      "/images/portfolio-1.png",
-      "/images/portfolio-2.png",
-    ],
+    image: "/images/UI.png",
   },
   {
     id: 4,
     title: "Current Vandi Website",
+    description:
+      "Et nisi voluptate nulla ea mollit excepteur culpa. Labore non labore nostrud amet exercitation ad do enim laborum ea quis nulla. Mollit magna amet sunt tempor. Sunt tempor cupidatat mollit velit velit sint aliqua cillum id. Aliquip aliqua qui anim sunt.",
     link: "#",
-    images: [
-      "/images/portfolio-4.png",
-      "/images/portfolio-5.png",
-      "/images/portfolio-6.png",
-    ],
-  },
-  {
-    id: 5,
-    title: "Fit Fusion Gym Website",
-    link: "#",
-    images: [
-      "/images/portfolio-5.png",
-      "/images/portfolio-6.png",
-      "/images/portfolio-7.png",
-    ],
-  },
-  {
-    id: 6,
-    title: "DX Digital Agency Website",
-    link: "#",
-    images: [
-      "/images/portfolio-6.png",
-      "/images/portfolio-7.png",
-      "/images/portfolio-8.png",
-    ],
-  },
-  {
-    id: 7,
-    title: "Little Learners Website",
-    link: "#",
-    images: [
-      "/images/portfolio-7.png",
-      "/images/portfolio-8.png",
-      "/images/portfolio-9.png",
-    ],
-  },
-  {
-    id: 8,
-    title: "StreamVibe Website",
-    link: "#",
-    images: [
-      "/images/portfolio-8.png",
-      "/images/portfolio-9.png",
-      "/images/portfolio-4.png",
-    ],
-  },
-  {
-    id: 9,
-    title: "YourBank Website",
-    link: "#",
-    images: [
-      "/images/portfolio-9.png",
-      "/images/portfolio-4.png",
-      "/images/portfolio-5.png",
-    ],
+    image: "/images/UI.png",
   },
 ];
 
