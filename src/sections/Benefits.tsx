@@ -19,7 +19,7 @@ const Benefits = () => {
         title={<span className="text-white">Vantagens</span>}
         subtitle={
           <span className="text-white">
-            A seguir te mostro as vanagens de desenvolversua solução comigo.
+            A seguir te mostro as vanagens de desenvolver sua solução comigo.
           </span>
         }
         classname="text-white"
