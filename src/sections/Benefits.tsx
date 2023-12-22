@@ -29,7 +29,7 @@ const Benefits = () => {
         {benefits.slice(0, 2).map((benefit, index) => (
           <div key={index} className="box">
             <h5 className="text-purple mb-2 text-center">{benefit.name}</h5>
-            <p className="text-grey-600">{benefit.description}</p>
+            <p className="text-grey-600 text-center">{benefit.description}</p>
           </div>
         ))}
       </div>
@@ -38,7 +38,7 @@ const Benefits = () => {
         {benefits.slice(2).map((benefit, index) => (
           <div key={index} className="box">
             <h5 className="text-purple mb-2 text-center">{benefit.name}</h5>
-            <p className="text-grey-600">{benefit.description}</p>
+            <p className="text-grey-600 text-center">{benefit.description}</p>
           </div>
         ))}
       </div>
