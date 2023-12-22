@@ -1,6 +1,6 @@
-import { contactDetails, navLinks, socialLinks } from "@/constants";
 import Link from "next/link";
 import CustomLink from "./CustomLink";
+import { contactDetails, navLinks, socialLinks } from "../constants";
 
 const Footer = () => {
   return (

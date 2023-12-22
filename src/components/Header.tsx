@@ -1,8 +1,8 @@
-import { navLinks } from "@/constants";
 import Link from "next/link";
 import NavLink from "./CustomLink";
 import { Phone } from "lucide-react";
 import MobileMenu from "./MobileMenu";
+import { navLinks } from "../constants";
 
 const Header = () => {
   return (

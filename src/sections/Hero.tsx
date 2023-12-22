@@ -19,7 +19,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="flex gap-2 mt-4 tablet:justify-start">
+        <div className="flex flex-col space-y-4">
           <Link href="/portfolio" className="btn btn-primary">
             Portfolio
             <ArrowRight size={16} />

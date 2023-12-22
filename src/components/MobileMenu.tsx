@@ -1,10 +1,10 @@
 "use client";
 
-import { navLinks, socialLinks } from "@/constants";
 import { Menu, Phone, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import NavLink from "./CustomLink";
+import { navLinks, socialLinks } from "../constants";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
