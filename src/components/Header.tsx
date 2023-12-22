@@ -6,7 +6,7 @@ import { navLinks } from "../constants";
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between h-20 max-width border-b border-peach fixed top-0 w-full z-20 bg-peach-600">
+    <header className="flex items-center justify-between h-20 max-width border-b border-peach bg-peach-600">
       <Link href="/">
         <h5 className="text-purple text-xl font-semibold">Lucas Cardoso</h5>
       </Link>
