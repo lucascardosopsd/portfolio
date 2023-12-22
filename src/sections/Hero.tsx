@@ -21,7 +21,7 @@ const Hero = () => {
           <p className="px-4 py-2 bg-peach-500 text-grey-600 w-max rounded">
             Olá 👋
           </p>
-          <h1 className="text-grey">Seja Muito bem vindo!</h1>
+          <h1 className="text-grey">Seja muito bem vindo!</h1>
           <p className="text-grey-600">
             Meu nome é Lucas Cardoso, sou desenvolvedor Javascript/Typescript a
             mais de 3 anos e utilizo tecnologias de ponta para te entregar o
