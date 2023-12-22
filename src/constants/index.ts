@@ -1,5 +1,11 @@
 import { Linkedin, Mail, MapPin, Phone, PhoneIcon } from "lucide-react";
-import { SlDirections, SlFrame, SlNote, SlPeople } from "react-icons/sl";
+import {
+  SlDirections,
+  SlFrame,
+  SlNote,
+  SlPeople,
+  SlWallet,
+} from "react-icons/sl";
 
 export const navLinks = [
   {
@@ -53,7 +59,7 @@ export const skills = [
     name: "Código Fonte Como Ativo",
     description:
       "O código do site ou aplicação é como um ativo para a empresa, portanto é importante ser dono de fato do seu site e não uma empresa de criação de sites online. Por isso te entrego código e não um site feito de arrasa e solta.",
-    icon: SlFrame,
+    icon: SlWallet,
   },
 ];
 export const benefits = [
