@@ -44,7 +44,7 @@ const Hero = () => {
       {/* Right */}
       <div className="flex flex-1">
         <div className="relative w-full h-full my-auto">
-          <div className="absolute bottom-0 w-full h-1/4 z-10 bg-gradient-to-t from-peach-600 to-transparent" />
+          <div className="absolute bottom-0 w-full h-1/4 z-0 bg-gradient-to-t from-peach-600 to-transparent" />
           <Image
             src="/images/me.png"
             alt="Foto Desenvolvedor"
