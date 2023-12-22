@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Portfolio = () => {
   return (
-    <section className="section-padding max-width">
+    <section className="section-padding max-width" id="portfolio">
       <SectionHeading
         title="Portfólio"
         subtitle="Aqui está uma seleção dos meus melhores projetos. Clique em um e veja em produção."

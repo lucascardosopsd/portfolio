@@ -13,16 +13,16 @@ export const navLinks = [
     url: "/",
   },
   {
-    label: "Sobre",
-    url: "/about",
+    label: "Habilidades",
+    url: "#skills",
+  },
+  {
+    label: "Vantagens",
+    url: "#benefits",
   },
   {
     label: "Portfólio",
-    url: "/portfolio",
-  },
-  {
-    label: "Contato",
-    url: "/contact",
+    url: "#portfolio",
   },
 ];
 export const skills = [

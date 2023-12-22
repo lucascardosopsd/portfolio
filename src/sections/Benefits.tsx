@@ -3,7 +3,10 @@ import { benefits } from "@/constants";
 
 const Benefits = () => {
   return (
-    <section className="max-width section-padding border-t border-peach bg-purple">
+    <section
+      className="max-width section-padding border-t border-peach bg-purple"
+      id="benefits"
+    >
       <SectionHeading
         title={<span className="text-white">Vantagens</span>}
         subtitle={

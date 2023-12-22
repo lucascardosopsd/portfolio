@@ -3,7 +3,10 @@ import { skills } from "@/constants";
 
 const Skills = () => {
   return (
-    <section className="section-padding max-width border-t border-peach">
+    <section
+      className="section-padding max-width border-t border-peach"
+      id="skills"
+    >
       <SectionHeading
         title="Habilidades"
         subtitle="Vou te apresentar um pouco sobre minhas habilidades mais relevantes"
