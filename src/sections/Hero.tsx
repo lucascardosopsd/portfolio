@@ -1,12 +1,19 @@
+"use client";
+import { watchInView } from "@/tools/watchInView";
 import { ArrowRight, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 
 const Hero = () => {
+  const ref = useRef(null);
+  watchInView({ ref, id: "hero" });
+
   return (
     <section
       className="flex items-center justify-center max-width flex-col-reverse tablet:flex-row space-x-4 my-4"
-      id="home"
+      id="hero"
+      ref={ref}
     >
       {/* Left */}
       <div className="flex-1 tablet:w:2/3 mt-10 tablet:mt-0 space-y-4">

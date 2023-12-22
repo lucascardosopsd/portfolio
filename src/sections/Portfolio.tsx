@@ -1,11 +1,17 @@
+"use client";
+
 import SectionHeading from "@/components/SectionHeading";
 import { portfolios } from "@/constants";
+import { watchInView } from "@/tools/watchInView";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 
 const Portfolio = () => {
+  const ref = useRef(null);
+  watchInView({ ref, id: "portfolio" });
   return (
-    <section className="section-padding max-width" id="portfolio">
+    <section className="section-padding max-width" id="portfolio" ref={ref}>
       <SectionHeading
         title="Portfólio"
         subtitle="Aqui está uma seleção dos meus melhores projetos. Clique em um e veja em produção."

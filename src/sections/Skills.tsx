@@ -1,11 +1,17 @@
+"use client";
 import SectionHeading from "@/components/SectionHeading";
 import { skills } from "@/constants";
+import { watchInView } from "@/tools/watchInView";
+import { useRef } from "react";
 
 const Skills = () => {
+  const ref = useRef(null);
+  watchInView({ ref, id: "skills" });
   return (
     <section
       className="section-padding max-width border-t border-peach"
       id="skills"
+      ref={ref}
     >
       <SectionHeading
         title="Habilidades"

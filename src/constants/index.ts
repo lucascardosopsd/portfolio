@@ -10,7 +10,7 @@ import {
 export const navLinks = [
   {
     label: "Inicio",
-    url: "/",
+    url: "#hero",
   },
   {
     label: "Habilidades",
