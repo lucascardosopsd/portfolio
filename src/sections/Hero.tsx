@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col space-y-4">
-          <Link href="/portfolio" className="btn btn-primary">
+          <Link href="/#portfolio" className="btn btn-primary">
             Portfolio
             <ArrowRight size={16} />
           </Link>
