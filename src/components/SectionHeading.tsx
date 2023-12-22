@@ -1,12 +1,17 @@
 interface SectionHeadingProps {
-  title: string;
-  subtitle: string;
+  title: string | JSX.Element;
+  subtitle: string | JSX.Element;
+  classname?: string;
 }
 
-const SectionHeading = ({ title, subtitle }: SectionHeadingProps) => {
+const SectionHeading = ({
+  title,
+  subtitle,
+  classname,
+}: SectionHeadingProps) => {
   return (
-    <div className="max-w-xl mx-auto mb-16 text-center">
-      <h2 className="text-grey-700 mb-2">{title}</h2>
+    <div className={`max-w-xl mx-auto mb-16 text-center ${classname}`}>
+      <h2 className="text-purple mb-2">{title}</h2>
       <p className="text-grey-600">{subtitle}</p>
     </div>
   );
