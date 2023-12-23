@@ -1,4 +1,4 @@
-import useDivInView from "@/app/context/DivInVIew";
+import useDivInView from "@/context/DivInVIew";
 import { useInView } from "framer-motion";
 import { RefObject, useEffect } from "react";
 

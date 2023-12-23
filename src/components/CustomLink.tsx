@@ -1,5 +1,5 @@
 "use client";
-import useDivInView from "@/app/context/DivInVIew";
+import useDivInView from "@/context/DivInVIew";
 import Link from "next/link";
 
 interface CustomLinkProps {
