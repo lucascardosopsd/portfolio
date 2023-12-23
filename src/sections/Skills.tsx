@@ -3,9 +3,10 @@ import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
 import { skills } from "@/constants";
 import { watchInView } from "@/tools/watchInView";
+import { TitlesData } from "@/types/titles";
 import { useRef } from "react";
 
-const Skills = () => {
+const Skills = ({ titlesData }: { titlesData: TitlesData }) => {
   const ref = useRef(null);
   watchInView({ ref, id: "skills" });
   return (
@@ -16,8 +17,8 @@ const Skills = () => {
         ref={ref}
       >
         <SectionHeading
-          title="Habilidades"
-          subtitle="Vou te apresentar um pouco sobre minhas habilidades mais relevantes"
+          title={titlesData.skillsTitle}
+          subtitle={titlesData.skillsSubTitle}
         />
         <div className="section-padding max-width grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] tablet:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3 tablet:gap-6">
           {skills.map((skill, index) => (

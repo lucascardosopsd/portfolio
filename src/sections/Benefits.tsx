@@ -1,12 +1,12 @@
 "use client";
-
 import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
 import { benefits } from "@/constants";
 import { watchInView } from "@/tools/watchInView";
+import { TitlesData } from "@/types/titles";
 import { useRef } from "react";
 
-const Benefits = () => {
+const Benefits = ({ titlesData }: { titlesData: TitlesData }) => {
   const ref = useRef(null);
   watchInView({ ref, id: "benefits" });
 
@@ -18,11 +18,9 @@ const Benefits = () => {
         ref={ref}
       >
         <SectionHeading
-          title={<span className="text-white">Vantagens</span>}
+          title={<span className="text-white">{titlesData.benefitsTitle}</span>}
           subtitle={
-            <span className="text-white">
-              A seguir te mostro as vanagens de desenvolver sua solução comigo.
-            </span>
+            <span className="text-white">{titlesData.benefitsSubTitle}</span>
           }
           classname="text-white"
         />

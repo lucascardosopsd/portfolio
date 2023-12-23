@@ -2,10 +2,11 @@
 
 import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
+import { TitlesData } from "@/types/titles";
 import { motion } from "framer-motion";
 import { SlArrowDown } from "react-icons/sl";
 
-const CTA = () => {
+const CTA = ({ titlesData }: { titlesData: TitlesData }) => {
   return (
     <FadeDiv>
       <motion.div
@@ -21,8 +22,8 @@ const CTA = () => {
       >
         <div className="flex flex-col gap-4 justify-center items-center">
           <SectionHeading
-            title="Vamos fechar negócio?"
-            subtitle="Você pode ter um site como este ou até mesmo uma aplicação mais robusta, basta clicar no botão azul ou enviar um e-mail para o endereço abaixo."
+            title={titlesData.ctaTitle}
+            subtitle={titlesData.ctaSubTitle}
           />
           <motion.div
             className="text-purple"

@@ -3,10 +3,11 @@ import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
 import { techs } from "@/constants";
 import { watchInView } from "@/tools/watchInView";
+import { TitlesData } from "@/types/titles";
 import Image from "next/image";
 import { useRef } from "react";
 
-const Techs = () => {
+const Techs = ({ titlesData }: { titlesData: TitlesData }) => {
   const ref = useRef(null);
   watchInView({ ref, id: "techs" });
   return (
@@ -17,14 +18,8 @@ const Techs = () => {
         ref={ref}
       >
         <SectionHeading
-          title={<span className="text-white">Tecnologias</span>}
-          subtitle={
-            <span className="text-white">
-              Essas são as tecnologias que mais domino, com elas cosigo entregar
-              uma aplicação consistente e robusta, sem sacrificar a velocidade
-              de desenvolvimento.
-            </span>
-          }
+          title={<span className="text-white">{titlesData.techsTitle}</span>}
+          subtitle={<span className="text-white">{titlesData.techsTitle}</span>}
         />
         <div className="section-padding max-width grid grid-cols-2 tablet:grid-cols-4 gap-3 tablet:gap-6">
           {techs.map((tech, index) => (

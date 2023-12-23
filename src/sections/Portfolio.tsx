@@ -4,19 +4,20 @@ import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
 import { portfolios } from "@/constants";
 import { watchInView } from "@/tools/watchInView";
+import { TitlesData } from "@/types/titles";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
-const Portfolio = () => {
+const Portfolio = ({ titlesData }: { titlesData: TitlesData }) => {
   const ref = useRef(null);
   watchInView({ ref, id: "portfolio" });
   return (
     <FadeDiv>
       <section className="section-padding max-width" id="portfolio" ref={ref}>
         <SectionHeading
-          title="Portfólio"
-          subtitle="Aqui está uma seleção dos meus melhores projetos. Clique em um e veja em produção."
+          title={titlesData.portfolioTitle}
+          subtitle={titlesData.portfolioSubTitle}
         />
         <div className="section-padding max-width grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] tablet:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3 tablet:gap-6">
           {portfolios.map((project, index) => (
