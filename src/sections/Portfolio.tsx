@@ -1,15 +1,25 @@
 "use client";
-
 import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
-import { portfolios } from "@/constants";
 import { watchInView } from "@/tools/watchInView";
 import { TitlesData } from "@/types/titles";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
-const Portfolio = ({ titlesData }: { titlesData: TitlesData }) => {
+interface ProjectsDataProps {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
+interface ProjectsProps {
+  titlesData: TitlesData;
+  projectsData: ProjectsDataProps[];
+}
+
+const Portfolio = ({ titlesData, projectsData }: ProjectsProps) => {
   const ref = useRef(null);
   watchInView({ ref, id: "portfolio" });
   return (
@@ -20,7 +30,7 @@ const Portfolio = ({ titlesData }: { titlesData: TitlesData }) => {
           subtitle={titlesData.portfolioSubTitle}
         />
         <div className="section-padding max-width grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] tablet:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3 tablet:gap-6">
-          {portfolios.map((project, index) => (
+          {projectsData.map((project, index) => (
             <Link
               key={index}
               href={project.link}
