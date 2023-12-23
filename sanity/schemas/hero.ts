@@ -1,7 +1,7 @@
 export default {
   name: "hero",
   type: "document",
-  title: "Hero Section",
+  title: "Cabeçalho",
   fields: [
     {
       name: "greeting",
