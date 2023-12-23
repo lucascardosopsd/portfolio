@@ -6,7 +6,22 @@ import Link from "next/link";
 import { useRef } from "react";
 import FadeDiv from "@/components/FadeDiv";
 
-const Hero = () => {
+interface HeroDataProps {
+  greeting: string;
+  title: string;
+  subtitle: string;
+  pic: {
+    asset: {
+      url: string;
+    };
+  };
+}
+
+interface HeroProps {
+  data: HeroDataProps;
+}
+
+const Hero = ({ data }: HeroProps) => {
   const ref = useRef(null);
   watchInView({ ref, id: "hero" });
 
@@ -21,14 +36,10 @@ const Hero = () => {
         <div className="flex-1 tablet:w:2/3 mt-10 tablet:mt-0 space-y-4">
           <div className="flex flex-col gap-3 items-center tablet:items-start max-w-2xl text-center tablet:text-left">
             <p className="px-4 py-2 bg-peach-500 text-grey-600 w-max rounded">
-              Olá 👋
+              {data.greeting}
             </p>
-            <h1 className="text-grey">Seja muito bem vindo!</h1>
-            <p className="text-grey-600">
-              Meu nome é Lucas Cardoso, sou desenvolvedor Javascript/Typescript
-              a mais de 3 anos e utilizo tecnologias de ponta para te entregar o
-              melhor resultado. Neste site vou te apresentar um pouco sobre mim.
-            </p>
+            <h1 className="text-grey">{data.title}</h1>
+            <p className="text-grey-600">{data.subtitle}</p>
           </div>
 
           <div className="flex flex-col space-y-4">
@@ -48,7 +59,7 @@ const Hero = () => {
           <div className="relative w-full h-full my-auto">
             <div className="absolute bottom-0 w-full h-1/4 z-0 bg-gradient-to-t from-peach-600 to-transparent" />
             <Image
-              src="/images/me.png"
+              src={data.pic.asset.url}
               alt="Foto Desenvolvedor"
               height={400}
               width={400}
