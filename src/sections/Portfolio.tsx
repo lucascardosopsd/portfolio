@@ -25,7 +25,8 @@ const Portfolio = () => {
               href={project.link}
               className="box flex flex-col items-center gap-5 border border-transparent hover:border-purple transition group cursor-pointer "
             >
-              <div className="relative w-full h-80 overflow-hidden rounded bg-purple flex items-center justify-center flex-shrink-0 mb-2 group-hover:scale-110 transition">
+              <div className="relative w-full h-80 overflow-hidden rounded flex items-center justify-center flex-shrink-0 mb-2 group-hover:scale-110 transition">
+                <div className="w-full h-8 absolute bottom-0 bg-gradient-to-t from-peach-600 to-transparent z-10" />
                 <Image
                   src={project.image}
                   alt={project.title}
