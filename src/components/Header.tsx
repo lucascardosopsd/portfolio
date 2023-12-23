@@ -32,8 +32,7 @@ const Header = () => {
           </header>
         </Headroom>
       </div>
-      <header className="flex items-center justify-between h-20 max-width border-peach w-full z-10 tablet:hidden sticky top-0 bg-peach-600">
-        <Logo />
+      <header className="w-full flex justify-end fixed z-50 top-2 right-2">
         <MobileMenu />
       </header>
     </>

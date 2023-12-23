@@ -16,10 +16,7 @@ const MobileMenu = () => {
   return (
     <div className="tablet:hidden">
       {/* Toggle */}
-      <button
-        className="text-gray-700 hover:text-purple transition-colors"
-        onClick={toggle}
-      >
+      <button className="text-white bg-purple p-4 rounded" onClick={toggle}>
         <Menu />
       </button>
 
