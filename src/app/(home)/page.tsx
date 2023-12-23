@@ -10,6 +10,7 @@ import { getSkills } from "@/services/getSkills";
 import { getBenefits } from "@/services/getBenefits";
 import { getProjects } from "@/services/getProjects";
 import { getTechs } from "@/services/getTechs";
+import { getCta } from "@/services/getCta";
 
 export default async function Home() {
   const heroData = await getHero();
@@ -18,6 +19,7 @@ export default async function Home() {
   const benefitsData = await getBenefits();
   const projectsData = await getProjects();
   const techsData = await getTechs();
+  const ctaData = await getCta();
 
   return (
     <>
@@ -26,7 +28,7 @@ export default async function Home() {
       <Benefits benefitsData={benefitsData} titlesData={titlesData[0]} />
       <Portfolio projectsData={projectsData} titlesData={titlesData[0]} />
       <Techs techsData={techsData} titlesData={titlesData[0]} />
-      <CTA titlesData={titlesData[0]} />
+      <CTA CtaData={ctaData[0]} />
     </>
   );
 }

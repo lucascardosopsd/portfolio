@@ -1,12 +1,18 @@
-"use client";
-
+"use client";;
 import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
-import { TitlesData } from "@/types/titles";
 import { motion } from "framer-motion";
 import { SlArrowDown } from "react-icons/sl";
 
-const CTA = ({ titlesData }: { titlesData: TitlesData }) => {
+interface CtaDataprops {
+  title: string;
+  subTitle: string;
+}
+interface CtaProps {
+  CtaData: CtaDataprops;
+}
+
+const CTA = ({ CtaData }: CtaProps) => {
   return (
     <FadeDiv>
       <motion.div
@@ -21,10 +27,7 @@ const CTA = ({ titlesData }: { titlesData: TitlesData }) => {
         transition={{ duration: 0.5, delay: 0.5 }}
       >
         <div className="flex flex-col gap-4 justify-center items-center">
-          <SectionHeading
-            title={titlesData.ctaTitle}
-            subtitle={titlesData.ctaSubTitle}
-          />
+          <SectionHeading title={CtaData.title} subtitle={CtaData.subTitle} />
           <motion.div
             className="text-purple"
             initial={{ translateY: 0 }}
