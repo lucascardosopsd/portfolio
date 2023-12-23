@@ -9,7 +9,7 @@ export default {
       title: "Título",
     },
     {
-      name: "subtitle",
+      name: "subTitle",
       type: "string",
       title: "Sub Título",
     },

@@ -73,17 +73,5 @@ export default {
       type: "string",
       title: "Sub Título Tecnologias",
     },
-    {
-      group: "cta",
-      name: "ctaTitle",
-      type: "string",
-      title: "Título CTA",
-    },
-    {
-      group: "cta",
-      name: "ctaSubTitle",
-      type: "string",
-      title: "Sub Título CTA",
-    },
   ],
 };
