@@ -5,12 +5,12 @@ export const getProjects = async () => {
     *[_type == "projects"]{
         title,
         description,
+        link,
         image{
           asset -> {
             url
           }
-        },
-        link,
+        }
     }
     `;
 

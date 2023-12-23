@@ -10,7 +10,11 @@ import { useRef } from "react";
 interface ProjectsDataProps {
   title: string;
   description: string;
-  image: string;
+  image: {
+    asset: {
+      url: string;
+    };
+  };
   link: string;
 }
 
@@ -39,7 +43,7 @@ const Portfolio = ({ titlesData, projectsData }: ProjectsProps) => {
               <div className="relative w-full h-80 overflow-hidden rounded flex items-center justify-center flex-shrink-0 mb-2 group-hover:scale-110 transition">
                 <div className="w-full h-8 absolute bottom-0 bg-gradient-to-t from-peach-600 to-transparent z-10" />
                 <Image
-                  src={project.image}
+                  src={project.image.asset.url}
                   alt={project.title}
                   fill
                   className="object-cover"
