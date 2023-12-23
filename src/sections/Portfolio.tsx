@@ -23,17 +23,17 @@ const Portfolio = () => {
             <Link
               key={index}
               href={project.link}
-              className="box flex flex-col items-center gap-5 border border-transparent hover:border-purple transition group cursor-pointer hover:-translate-y-5 hover:shadow-custom"
+              className="box flex flex-col items-center gap-5 border border-transparent hover:border-purple transition group cursor-pointer "
             >
-              <div className="relative w-full h-80 overflow-hidden rounded bg-purple flex items-center justify-center flex-shrink-0 mb-2">
+              <div className="relative w-full h-80 overflow-hidden rounded bg-purple flex items-center justify-center flex-shrink-0 mb-2 group-hover:scale-110 transition">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover group-hover:scale-110 "
+                  className="object-cover"
                 />
               </div>
-              <div className="text-center">
+              <div className="text-center group-hover:scale-110 transition">
                 <h4 className="text-purple">{project.title}</h4>
                 <p className="text-grey-600">{project.description}</p>
               </div>
