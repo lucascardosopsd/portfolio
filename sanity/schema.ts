@@ -4,7 +4,8 @@ import titles from "./schemas/titles";
 import skills from "./schemas/skills";
 import benefits from "./schemas/benefits";
 import projects from "./schemas/projects";
+import techs from "./schemas/techs";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [hero, titles, skills, benefits, projects],
+  types: [hero, titles, skills, benefits, projects, techs],
 };
