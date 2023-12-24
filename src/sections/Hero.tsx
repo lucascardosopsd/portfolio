@@ -55,14 +55,14 @@ const Hero = ({ data }: HeroProps) => {
           </div>
         </div>
         {/* Right */}
-        <div className="flex flex-1">
-          <div className="relative w-full h-full my-auto">
+        <div className="flex flex-1 h-full w-full items-center justify-center py-4 tablet:py-0">
+          <div className="relative h-[70vh] w-auto rounded-2xl border border-peach bg-zinc-50">
             <Image
               src={data.pic.asset.url}
               alt="Foto Desenvolvedor"
-              height={400}
-              width={400}
-              className="h-[400px] tablet:h-[600px] w-auto mx-auto"
+              height={1000}
+              width={1000}
+              className="object-cover h-full w-full"
             />
           </div>
         </div>
