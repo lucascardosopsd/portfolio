@@ -1,6 +1,4 @@
-import Link from "next/link";
 import NavLink from "./CustomLink";
-import { Phone } from "lucide-react";
 import MobileMenu from "./MobileMenu";
 import { navLinks } from "../constants";
 import Headroom from "react-headroom";
@@ -20,13 +18,6 @@ const Header = () => {
                     <NavLink href={link.url} label={link.label} />
                   </li>
                 ))}
-                <Link
-                  href="https://api.whatsapp.com/send?phone=5517996484654"
-                  className="btn btn-primary"
-                >
-                  <Phone size={24} />
-                  Fale Comigo
-                </Link>
               </ul>
             </nav>
           </header>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import FadeDiv from "@/components/FadeDiv";
+import { socialLinks } from "@/constants";
 
 interface HeroDataProps {
   greeting: string;
@@ -28,7 +29,7 @@ const Hero = ({ data }: HeroProps) => {
   return (
     <FadeDiv>
       <section
-        className="flex items-center justify-center max-width flex-col-reverse tablet:flex-row space-x-4"
+        className="flex items-center justify-center max-width flex-col-reverse tablet:flex-row space-x-4 py-4 tablet:py-0"
         id="hero"
         ref={ref}
       >
@@ -52,6 +53,21 @@ const Hero = ({ data }: HeroProps) => {
               <Phone />
               Fale Comigo!
             </Link>
+
+            <div className="flex justify-center tablet:justify-start gap-3">
+              {socialLinks.map((link, index) => (
+                <div className="flex items-center space-x-2">
+                  <a
+                    href={link.url}
+                    key={index}
+                    className="w-10 h-10 bg-purple text-white flex items-center justify-center rounded"
+                  >
+                    <link.icon strokeWidth={0} fill="currentColor" />
+                  </a>
+                  <p className="text-zinc-800">{link.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         {/* Right */}
