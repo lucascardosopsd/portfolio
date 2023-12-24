@@ -22,7 +22,7 @@ const Benefits = ({ titlesData, benefitsData }: BenefitsProps) => {
   return (
     <FadeDiv>
       <section
-        className="max-width section-padding border-t border-peach bg-purple"
+        className="max-width section-padding border-t border- dark:border-zinc-600 bg-purple"
         id="benefits"
         ref={ref}
       >
@@ -34,8 +34,10 @@ const Benefits = ({ titlesData, benefitsData }: BenefitsProps) => {
         <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] tablet:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3 tablet:gap-6 mb-6">
           {benefitsData.slice(0, 2).map((benefit, index) => (
             <div key={index} className="box">
-              <h5 className="text-purple mb-2 text-center">{benefit.title}</h5>
-              <p className="text-grey-600 text-center">{benefit.description}</p>
+              <h5 className="text-purple mb-2 text-center ">{benefit.title}</h5>
+              <p className="text-grey-600 text-center dark:text-zinc-100">
+                {benefit.description}
+              </p>
             </div>
           ))}
         </div>
@@ -44,7 +46,9 @@ const Benefits = ({ titlesData, benefitsData }: BenefitsProps) => {
           {benefitsData.slice(2).map((benefit, index) => (
             <div key={index} className="box">
               <h5 className="text-purple mb-2 text-center">{benefit.title}</h5>
-              <p className="text-grey-600 text-center">{benefit.description}</p>
+              <p className="text-grey-600 text-center dark:text-zinc-100">
+                {benefit.description}
+              </p>
             </div>
           ))}
         </div>
