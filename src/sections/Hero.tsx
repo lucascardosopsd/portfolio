@@ -36,7 +36,7 @@ const Hero = ({ data }: HeroProps) => {
         {/* Left */}
         <div className="flex-1 tablet:w:2/3 mt-10 tablet:mt-0 space-y-4">
           <div className="flex flex-col gap-3 items-center tablet:items-start max-w-2xl text-center tablet:text-left">
-            <p className="px-4 py-2 bg-peach-500 text-grey-600 w-max rounded">
+            <p className="px-4 py-2 bg-peach-500 dark:bg-zinc-900 text-grey-600 w-max rounded">
               {data.greeting}
             </p>
             <h1 className="text-grey">{data.title}</h1>

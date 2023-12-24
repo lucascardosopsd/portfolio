@@ -53,7 +53,7 @@
   }
 
   .box {
-    @apply bg-peach-200 p-8 tablet:p-12 rounded-lg border-peach;
+    @apply bg-peach-200 p-8 tablet:p-12 rounded-lg border border-peach;
   }
 
   .btn {

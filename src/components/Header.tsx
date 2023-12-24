@@ -3,6 +3,7 @@ import MobileMenu from "./MobileMenu";
 import { navLinks } from "../constants";
 import Headroom from "react-headroom";
 import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   return (
@@ -18,6 +19,9 @@ const Header = () => {
                     <NavLink href={link.url} label={link.label} />
                   </li>
                 ))}
+                <li>
+                  <ThemeToggle />
+                </li>
               </ul>
             </nav>
           </header>
