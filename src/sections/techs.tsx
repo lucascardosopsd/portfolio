@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useRef } from "react";
 
 interface TechsDataProps {
-  order: string;
+  order: number;
   title: string;
   logo: {
     asset: {
@@ -36,26 +36,28 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
           subtitle={titlesData.techsSubTitle}
         />
         <div className="section-padding max-width grid grid-cols-2 tablet:grid-cols-4 gap-3 tablet:gap-6">
-          {techsData.map((tech, index) => (
-            <div
-              key={index}
-              className="box transition flex flex-col items-center gap-5 hover:border-purple"
-            >
-              <div className="w-16 h-16flex items-center justify-center flex-shrink-0 mb-2">
-                <Image
-                  src={tech.logo.asset.url}
-                  alt={tech.title}
-                  height={100}
-                  width={100}
-                />
+          {techsData
+            .sort((a, b) => a.order - b.order)
+            .map((tech, index) => (
+              <div
+                key={index}
+                className="box transition flex flex-col items-center gap-5 hover:border-purple"
+              >
+                <div className="w-16 h-16flex items-center justify-center flex-shrink-0 mb-2">
+                  <Image
+                    src={tech.logo.asset.url}
+                    alt={tech.title}
+                    height={100}
+                    width={100}
+                  />
+                </div>
+                <div className="text-center">
+                  <h4 className="text-grey-700 dark:text-zinc-100">
+                    {tech.title}
+                  </h4>
+                </div>
               </div>
-              <div className="text-center">
-                <h4 className="text-grey-700 dark:text-zinc-100">
-                  {tech.title}
-                </h4>
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
       </section>
     </FadeDiv>
