@@ -56,10 +56,9 @@ const Hero = ({ data }: HeroProps) => {
 
             <div className="flex justify-center tablet:justify-start gap-3">
               {socialLinks.map((link, index) => (
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2" key={index}>
                   <a
                     href={link.url}
-                    key={index}
                     className="w-10 h-10 bg-purple text-white flex items-center justify-center rounded"
                   >
                     <link.icon strokeWidth={0} fill="currentColor" />
