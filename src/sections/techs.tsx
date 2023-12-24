@@ -33,7 +33,7 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
       >
         <SectionHeading
           title={titlesData.techsTitle}
-          subtitle={titlesData.techsTitle}
+          subtitle={titlesData.techsSubTitle}
         />
         <div className="section-padding max-width grid grid-cols-2 tablet:grid-cols-4 gap-3 tablet:gap-6">
           {techsData.map((tech, index) => (
