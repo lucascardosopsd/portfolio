@@ -39,7 +39,7 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
           {techsData.map((tech, index) => (
             <div
               key={index}
-              className="box hover:scale-110 transition flex flex-col items-center gap-5 border border-transparent hover:border-purple"
+              className="box transition flex flex-col items-center gap-5 hover:border-purple"
             >
               <div className="w-16 h-16flex items-center justify-center flex-shrink-0 mb-2">
                 <Image
