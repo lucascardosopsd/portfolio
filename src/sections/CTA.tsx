@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
 import { motion } from "framer-motion";
@@ -16,7 +16,7 @@ const CTA = ({ CtaData }: CtaProps) => {
   return (
     <FadeDiv>
       <motion.div
-        className="padding-section max-width border border-peach py-10"
+        className="padding-section max-width border border-peach dark:border-zinc-600 py-10 dark:bg-zinc-800"
         initial={{ height: "300px" }}
         whileInView={{
           height: "70vh",
