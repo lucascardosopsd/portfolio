@@ -28,7 +28,11 @@ const Portfolio = ({ titlesData, projectsData }: ProjectsProps) => {
   watchInView({ ref, id: "portfolio" });
   return (
     <FadeDiv>
-      <section className="section-padding max-width" id="portfolio" ref={ref}>
+      <section
+        className="section-padding max-width border-t border-peach dark:border-zinc-600"
+        id="portfolio"
+        ref={ref}
+      >
         <SectionHeading
           title={titlesData.portfolioTitle}
           subtitle={titlesData.portfolioSubTitle}
@@ -51,7 +55,9 @@ const Portfolio = ({ titlesData, projectsData }: ProjectsProps) => {
               </div>
               <div className="text-center group-hover:scale-110 transition">
                 <h4 className="text-purple">{project.title}</h4>
-                <p className="text-grey-600">{project.description}</p>
+                <p className="text-grey-600 dark:text-zinc-100">
+                  {project.description}
+                </p>
               </div>
             </Link>
           ))}
