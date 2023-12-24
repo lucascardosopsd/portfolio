@@ -23,10 +23,10 @@ export default function ThemeToggle() {
       <label className="relative cursor-pointer p-2">
         <div className="flex items-center border border-zinc-800 p-2 rounded-md">
           <span className="block dark:hidden text-zinc-800">
-            <SlCup size={30} />
+            <SlCup size={25} />
           </span>
           <span className="hidden dark:block text-purple">
-            <SlGhost size={30} />
+            <SlGhost size={25} />
           </span>
         </div>
         <span className="sr-only">Switch to light / dark version</span>
