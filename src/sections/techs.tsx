@@ -27,7 +27,7 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
   return (
     <FadeDiv>
       <section
-        className="section-padding max-width border-t border-peach"
+        className="section-padding max-width border-t border-peach dark:border-zinc-600"
         id="techs"
         ref={ref}
       >
@@ -50,7 +50,9 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
                 />
               </div>
               <div className="text-center">
-                <h4 className="text-grey-700">{tech.title}</h4>
+                <h4 className="text-grey-700 dark:text-zinc-100">
+                  {tech.title}
+                </h4>
               </div>
             </div>
           ))}
