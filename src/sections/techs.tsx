@@ -27,13 +27,13 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
   return (
     <FadeDiv>
       <section
-        className="section-padding max-width border-t border-peach bg-purple"
+        className="section-padding max-width border-t border-peach"
         id="techs"
         ref={ref}
       >
         <SectionHeading
-          title={<span className="text-white">{titlesData.techsTitle}</span>}
-          subtitle={<span className="text-white">{titlesData.techsTitle}</span>}
+          title={titlesData.techsTitle}
+          subtitle={titlesData.techsTitle}
         />
         <div className="section-padding max-width grid grid-cols-2 tablet:grid-cols-4 gap-3 tablet:gap-6">
           {techsData.map((tech, index) => (

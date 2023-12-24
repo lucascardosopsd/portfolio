@@ -16,7 +16,7 @@
 
 @layer base {
   section {
-    @apply min-h-[calc(100vh-7rem)];
+    @apply min-h-[calc(100vh-7rem)] bg-gradient-to-t from-peach-100 to-gray-100;
   }
   h1 {
     @apply text-5xl font-bold;
@@ -53,7 +53,7 @@
   }
 
   .box {
-    @apply bg-peach-400 p-8 tablet:p-12 rounded-lg;
+    @apply bg-peach-200 p-8 tablet:p-12 rounded-lg border-peach;
   }
 
   .btn {

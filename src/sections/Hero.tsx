@@ -28,7 +28,7 @@ const Hero = ({ data }: HeroProps) => {
   return (
     <FadeDiv>
       <section
-        className="flex items-center justify-center max-width flex-col-reverse tablet:flex-row space-x-4 my-4"
+        className="flex items-center justify-center max-width flex-col-reverse tablet:flex-row space-x-4"
         id="hero"
         ref={ref}
       >
@@ -57,7 +57,6 @@ const Hero = ({ data }: HeroProps) => {
         {/* Right */}
         <div className="flex flex-1">
           <div className="relative w-full h-full my-auto">
-            <div className="absolute bottom-0 w-full h-1/4 z-0 bg-gradient-to-t from-peach-600 to-transparent" />
             <Image
               src={data.pic.asset.url}
               alt="Foto Desenvolvedor"

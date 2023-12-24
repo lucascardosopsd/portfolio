@@ -27,11 +27,8 @@ const Benefits = ({ titlesData, benefitsData }: BenefitsProps) => {
         ref={ref}
       >
         <SectionHeading
-          title={<span className="text-white">{titlesData.benefitsTitle}</span>}
-          subtitle={
-            <span className="text-white">{titlesData.benefitsSubTitle}</span>
-          }
-          classname="text-white"
+          title={titlesData.benefitsTitle}
+          subtitle={titlesData.benefitsSubTitle}
         />
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] tablet:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3 tablet:gap-6 mb-6">

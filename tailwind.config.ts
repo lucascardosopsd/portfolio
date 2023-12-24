@@ -31,7 +31,7 @@ const config: Config = {
           700: "#7833FF",
         },
         peach: {
-          DEFAULT: "#E1DBD1",
+          DEFAULT: "#EEEBE5",
           100: "#FDFDFC",
           200: "#FBFAF9",
           300: "#F9F8F6",
@@ -50,11 +50,6 @@ const config: Config = {
           600: "#4D4D4D",
           700: "#333333",
         },
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
