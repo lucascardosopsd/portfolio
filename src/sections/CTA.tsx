@@ -1,18 +1,27 @@
 "use client";
 import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
+import { getLang } from "@/tools/getLang";
 import { motion } from "framer-motion";
 import { SlArrowDown } from "react-icons/sl";
 
-interface CtaDataprops {
-  title: string;
-  subTitle: string;
+interface ctaDataprops {
+  title: {
+    pt: string;
+    en: string;
+  };
+  subTitle: {
+    pt: string;
+    en: string;
+  };
 }
 interface CtaProps {
-  CtaData: CtaDataprops;
+  ctaData: ctaDataprops;
 }
 
-const CTA = ({ CtaData }: CtaProps) => {
+const CTA = ({ ctaData }: CtaProps) => {
+  const lang = getLang();
+
   return (
     <FadeDiv>
       <motion.div
@@ -27,7 +36,10 @@ const CTA = ({ CtaData }: CtaProps) => {
         transition={{ duration: 0.5, delay: 0.5 }}
       >
         <div className="flex flex-col gap-4 justify-center items-center">
-          <SectionHeading title={CtaData.title} subtitle={CtaData.subTitle} />
+          <SectionHeading
+            title={ctaData.title[lang]}
+            subtitle={ctaData.subTitle[lang]}
+          />
           <motion.div
             className="text-purple"
             initial={{ translateY: 0 }}

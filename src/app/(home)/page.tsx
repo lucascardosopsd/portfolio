@@ -9,6 +9,8 @@ import { getTechs } from "@/services/getTechs";
 import { getCta } from "@/services/getCta";
 import Benefits from "@/sections/Benefits";
 import Portfolio from "@/sections/Portfolio";
+import Techs from "@/sections/techs";
+import CTA from "@/sections/CTA";
 
 export default async function Home() {
   const heroData = await getHero();
@@ -25,8 +27,8 @@ export default async function Home() {
       <Skills skillsData={skillsData} titlesData={titlesData[0]} />
       <Benefits benefitsData={benefitsData} titlesData={titlesData[0]} />
       <Portfolio projectsData={projectsData} titlesData={titlesData[0]} />
-      {/* <Techs techsData={techsData} titlesData={titlesData[0]} /> */}
-      {/* <CTA CtaData={ctaData[0]} /> */}
+      <Techs techsData={techsData} titlesData={titlesData[0]} />
+      <CTA ctaData={ctaData[0]} />
     </>
   );
 }
