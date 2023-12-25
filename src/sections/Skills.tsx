@@ -27,11 +27,6 @@ interface SKillsProps {
 const Skills = ({ titlesData, skillsData }: SKillsProps) => {
   const lang = getLang();
 
-  const { title, subtitle } = {
-    title: titlesData.skillsTitle[lang],
-    subtitle: titlesData.skillsSubTitle[lang],
-  };
-
   const ref = useRef(null);
   watchInView({ ref, id: "skills" });
 
@@ -42,7 +37,10 @@ const Skills = ({ titlesData, skillsData }: SKillsProps) => {
         id="skills"
         ref={ref}
       >
-        <SectionHeading title={title} subtitle={subtitle} />
+        <SectionHeading
+          title={titlesData.skillsTitle[lang]}
+          subtitle={titlesData.skillsSubTitle[lang]}
+        />
         <div className="section-padding max-width grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] tablet:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3 tablet:gap-6">
           {skillsData.map((skill, index) => {
             return (
