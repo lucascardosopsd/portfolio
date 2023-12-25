@@ -68,7 +68,7 @@ const Hero = ({ data }: HeroProps) => {
               className="btn border hover:bg-zinc-100 hover:text-purple transition border-peach dark:border-zinc-600 dark:text-zinc-100"
             >
               <Phone />
-              Fale Comigo!
+              {lang == "en" ? "text to me" : "Fale Comigo!"}
             </Link>
 
             <div className="flex justify-center tablet:justify-start gap-3">
