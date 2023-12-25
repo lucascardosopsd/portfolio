@@ -5,20 +5,44 @@ export default {
   fields: [
     {
       name: "title",
-      type: "string",
       title: "Título",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
     },
 
     {
       name: "description",
-      type: "string",
       title: "Descrição",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
     },
 
     {
       name: "slIconName",
-      type: "string",
       title: "Nome do Icone (Simple Line Icons)",
+      type: "string",
     },
   ],
 };

@@ -5,20 +5,56 @@ export default {
   fields: [
     {
       name: "greeting",
-      type: "string",
       title: "Saudação",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
     },
 
     {
       name: "title",
-      type: "string",
       title: "Título",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
     },
 
     {
       name: "subtitle",
-      type: "string",
       title: "Sub Título",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
     },
 
     {
