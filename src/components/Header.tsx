@@ -4,8 +4,11 @@ import { navLinks } from "../constants";
 import Headroom from "react-headroom";
 import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
+import { getLang } from "@/tools/getLang";
 
 const Header = () => {
+  const lang = getLang();
+
   return (
     <>
       <div className="flex w-full items-center border-b border-peach dark:border-zinc-800 ">
@@ -16,7 +19,7 @@ const Header = () => {
               <ul className="flex items-center gap-8">
                 {navLinks.map((link, index) => (
                   <li key={index}>
-                    <NavLink href={link.url} label={link.label} />
+                    <NavLink href={link.url} label={link.label[lang]} />
                   </li>
                 ))}
                 <li>

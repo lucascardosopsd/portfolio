@@ -5,9 +5,12 @@ import Link from "next/link";
 import { useState } from "react";
 import NavLink from "./CustomLink";
 import { navLinks, socialLinks } from "../constants";
+import { getLang } from "@/tools/getLang";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const lang = getLang();
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -42,10 +45,10 @@ const MobileMenu = () => {
         <nav className="flex flex-col items-center justify-center flex-1 gap-10">
           <ul className="flex flex-col gap-5">
             {navLinks.map((link, index) => (
-              <li key={index + link.label} onClick={toggle}>
+              <li key={index} onClick={toggle}>
                 <NavLink
                   href={link.url}
-                  label={link.label}
+                  label={link.label[lang]}
                   classname="text-3xl"
                 />
               </li>

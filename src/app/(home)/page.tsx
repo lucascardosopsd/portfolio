@@ -1,5 +1,4 @@
 import Skills from "@/sections/Skills";
-import Hero from "../../sections/Hero";
 import { getHero } from "../../services/getHero";
 import { getTitles } from "../../services/getTitles";
 import { getSkills } from "@/services/getSkills";
@@ -11,6 +10,7 @@ import Benefits from "@/sections/Benefits";
 import Portfolio from "@/sections/Portfolio";
 import Techs from "@/sections/techs";
 import CTA from "@/sections/CTA";
+import Hero from "@/sections/Hero";
 
 export default async function Home() {
   const heroData = await getHero();

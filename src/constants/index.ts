@@ -1,3 +1,5 @@
+"use client";
+
 import { Linkedin, Mail, MapPin, Phone, PhoneIcon } from "lucide-react";
 import {
   SlDirections,
@@ -9,23 +11,38 @@ import {
 
 export const navLinks = [
   {
-    label: "Inicio",
+    label: {
+      pt: "Inicio",
+      en: "Home",
+    },
     url: "#hero",
   },
   {
-    label: "Habilidades",
+    label: {
+      pt: "Habilidades",
+      en: "Skills",
+    },
     url: "#skills",
   },
   {
-    label: "Vantagens",
+    label: {
+      pt: "Vantagens",
+      en: "Benefits",
+    },
     url: "#benefits",
   },
   {
-    label: "Portfólio",
+    label: {
+      pt: "Portfolio",
+      en: "Portfolio",
+    },
     url: "#portfolio",
   },
   {
-    label: "Tecnologias",
+    label: {
+      pt: "Tecnologias",
+      en: "Techs",
+    },
     url: "#techs",
   },
 ];

@@ -1,8 +1,11 @@
 import Link from "next/link";
 import CustomLink from "./CustomLink";
 import { contactDetails, navLinks, socialLinks } from "../constants";
+import { getLang } from "@/tools/getLang";
 
 const Footer = () => {
+  const lang = getLang();
+
   return (
     <footer className="py-10 border-t border-peach dark:border-zinc-600 max-width dark:bg-zinc-800">
       <div className="flex item-center justify-between">
@@ -13,7 +16,7 @@ const Footer = () => {
           <ul className="flex items-center gap-8">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <CustomLink href={link.url} label={link.label} />
+                <CustomLink href={link.url} label={link.label[lang]} />
               </li>
             ))}
           </ul>
