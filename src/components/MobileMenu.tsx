@@ -6,6 +6,7 @@ import { useState } from "react";
 import NavLink from "./CustomLink";
 import { navLinks, socialLinks } from "../constants";
 import { getLang } from "@/tools/getLang";
+import ThemeToggle from "./ThemeToggle";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,12 +35,17 @@ const MobileMenu = () => {
           <Link href="/">
             <h5 className="text-purple text-xl font-semibold">Lucas Cardoso</h5>
           </Link>
-          <button
-            className="text-grey-700 dark:text-purple hover:text-purple transition-colors"
-            onClick={toggle}
-          >
-            <X />
-          </button>
+          <div className="flex items-center justify-center">
+            <span className="flex justify-between">
+              <ThemeToggle />
+            </span>
+            <button
+              className="text-grey-700 dark:text-purple hover:text-purple transition-colors"
+              onClick={toggle}
+            >
+              <X />
+            </button>
+          </div>
         </div>
 
         <nav className="flex flex-col items-center justify-center flex-1 gap-10">
