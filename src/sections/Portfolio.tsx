@@ -1,6 +1,7 @@
 "use client";
 import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
+import { getLang } from "@/tools/getLang";
 import { watchInView } from "@/tools/watchInView";
 import { TitlesData } from "@/types/titles";
 import Image from "next/image";
@@ -8,8 +9,14 @@ import Link from "next/link";
 import { useRef } from "react";
 
 interface ProjectsDataProps {
-  title: string;
-  description: string;
+  title: {
+    pt: string;
+    en: string;
+  };
+  description: {
+    pt: string;
+    en: string;
+  };
   image: {
     asset: {
       url: string;
@@ -26,6 +33,9 @@ interface ProjectsProps {
 const Portfolio = ({ titlesData, projectsData }: ProjectsProps) => {
   const ref = useRef(null);
   watchInView({ ref, id: "portfolio" });
+
+  const lang = getLang();
+
   return (
     <FadeDiv>
       <section
@@ -34,8 +44,8 @@ const Portfolio = ({ titlesData, projectsData }: ProjectsProps) => {
         ref={ref}
       >
         <SectionHeading
-          title={titlesData.portfolioTitle}
-          subtitle={titlesData.portfolioSubTitle}
+          title={titlesData.portfolioTitle[lang]}
+          subtitle={titlesData.portfolioSubTitle[lang]}
         />
         <div className="section-padding max-width grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] tablet:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3 tablet:gap-6">
           {projectsData.map((project, index) => (
@@ -48,15 +58,15 @@ const Portfolio = ({ titlesData, projectsData }: ProjectsProps) => {
                 <div className="w-full h-8 absolute bottom-0 bg-gradient-to-t from-peach-600 to-transparent z-10" />
                 <Image
                   src={project.image.asset.url}
-                  alt={project.title}
+                  alt={project.title[lang]}
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="text-center group-hover:scale-110 transition">
-                <h4 className="text-purple">{project.title}</h4>
+                <h4 className="text-purple">{project.title[lang]}</h4>
                 <p className="text-grey-600 dark:text-zinc-100">
-                  {project.description}
+                  {project.description[lang]}
                 </p>
               </div>
             </Link>
