@@ -1,6 +1,7 @@
 "use client";
 import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
+import { getLang } from "@/tools/getLang";
 import { watchInView } from "@/tools/watchInView";
 import { TitlesData } from "@/types/titles";
 import Image from "next/image";
@@ -24,6 +25,9 @@ interface TechsProps {
 const Techs = ({ titlesData, techsData }: TechsProps) => {
   const ref = useRef(null);
   watchInView({ ref, id: "techs" });
+
+  const lang = getLang();
+
   return (
     <FadeDiv>
       <section
@@ -32,8 +36,8 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
         ref={ref}
       >
         <SectionHeading
-          title={titlesData.techsTitle}
-          subtitle={titlesData.techsSubTitle}
+          title={titlesData.techsTitle[lang]}
+          subtitle={titlesData.techsSubTitle[lang]}
         />
         <div className="section-padding max-width grid grid-cols-2 tablet:grid-cols-4 gap-3 tablet:gap-6">
           {techsData
