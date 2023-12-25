@@ -11,8 +11,6 @@ export const getTitles = async () => {
       portfolioSubTitle,
       techsTitle,
       techsSubTitle,
-      ctaTitle,
-      ctaSubTitle,
     }
     `;
 
