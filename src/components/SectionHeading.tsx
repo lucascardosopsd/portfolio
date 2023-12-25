@@ -1,8 +1,8 @@
 "use client";
 
 interface SectionHeadingProps {
-  title: string | JSX.Element;
-  subtitle: string | JSX.Element;
+  title: string;
+  subtitle: string;
   classname?: string;
 }
 

@@ -6,11 +6,21 @@ import Link from "next/link";
 import { useRef } from "react";
 import FadeDiv from "@/components/FadeDiv";
 import { socialLinks } from "@/constants";
+import { getLang } from "@/tools/getLang";
 
 interface HeroDataProps {
-  greeting: string;
-  title: string;
-  subtitle: string;
+  greeting: {
+    pt: string;
+    en: string;
+  };
+  title: {
+    pt: string;
+    en: string;
+  };
+  subtitle: {
+    pt: string;
+    en: string;
+  };
   pic: {
     asset: {
       url: string;
@@ -23,6 +33,8 @@ interface HeroProps {
 }
 
 const Hero = ({ data }: HeroProps) => {
+  const lang = getLang();
+
   const ref = useRef(null);
   watchInView({ ref, id: "hero" });
 
@@ -37,10 +49,12 @@ const Hero = ({ data }: HeroProps) => {
         <div className="flex-1 tablet:w:2/3 mt-10 tablet:mt-0 space-y-4">
           <div className="flex flex-col gap-3 items-center tablet:items-start max-w-2xl text-center tablet:text-left">
             <p className="px-4 py-2 bg-peach-500 dark:bg-zinc-800  text-grey-600 dark:text-zinc-100 w-max rounded">
-              {data.greeting}
+              {data.greeting[lang]}
             </p>
-            <h1 className="text-grey dark:text-zinc-100">{data.title}</h1>
-            <p className="text-grey-600 dark:text-zinc-300">{data.subtitle}</p>
+            <h1 className="text-grey dark:text-zinc-100">{data.title[lang]}</h1>
+            <p className="text-grey-600 dark:text-zinc-300">
+              {data.subtitle[lang]}
+            </p>
           </div>
 
           <div className="flex flex-col space-y-4">
