@@ -28,50 +28,146 @@ export default {
     {
       group: "skills",
       name: "skillsTitle",
-      type: "string",
       title: "Título Habilidades",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
     },
     {
       group: "skills",
       name: "skillsSubTitle",
-      type: "string",
       title: "Sub Título Habilidades",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
     },
     {
       group: "benefits",
       name: "benefitsTitle",
-      type: "string",
       title: "Título Vantagens",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
     },
     {
       group: "benefits",
       name: "benefitsSubTitle",
-      type: "string",
       title: "Sub Título Vantagens",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
     },
     {
       group: "portfolio",
       name: "portfolioTitle",
-      type: "string",
       title: "Título Portfolio",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
     },
     {
       group: "portfolio",
       name: "portfolioSubTitle",
-      type: "string",
       title: "Sub Título Portfolio",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
     },
     {
       group: "techs",
       name: "techsTitle",
-      type: "string",
       title: "Título Tecnologias",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
     },
     {
       group: "techs",
       name: "techsSubTitle",
-      type: "string",
       title: "Sub Título Tecnologias",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
     },
   ],
 };
