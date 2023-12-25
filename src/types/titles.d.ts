@@ -1,12 +1,47 @@
 export interface TitlesData {
-  skillsTitle: string;
-  skillsSubTitle: string;
-  benefitsTitle: string;
-  benefitsSubTitle: string;
-  portfolioTitle: string;
-  portfolioSubTitle: string;
-  techsTitle: string;
-  techsSubTitle: string;
-  ctaTitle: string;
-  ctaSubTitle: string;
+  skillsTitle: {
+    pt: string;
+    en: string;
+  };
+  skillsSubTitle: {
+    pt: string;
+    en: string;
+  };
+  benefitsTitle: {
+    pt: string;
+    en: string;
+  };
+  benefitsSubTitle: {
+    pt: string;
+    en: string;
+  };
+  portfolioTitle: {
+    pt: string;
+    en: string;
+  };
+  portfolioSubTitle: {
+    pt: string;
+    en: string;
+  };
+  techsTitle: {
+    pt: string;
+    en: string;
+  };
+  techsSubTitle: {
+    pt: string;
+    en: string;
+  };
+  ctaTitle: {
+    pt: string;
+    en: string;
+  };
+  ctaSubTitle: {
+    pt: string;
+    en: string;
+  };
+}
+
+export interface TitlesDataLang {
+  pt: string;
+  en: string;
 }
