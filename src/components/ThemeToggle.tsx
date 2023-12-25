@@ -6,31 +6,24 @@ import { SlCup, SlGhost } from "react-icons/sl";
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
+  const toggleTheme = () => {
+    if (theme === "dark") {
+      return setTheme("light");
+    }
+    return setTheme("dark");
+  };
+
   return (
-    <div className="flex flex-col justify-center items-center ml-3 relative">
-      <input
-        type="checkbox"
-        name="light-switch"
-        className="absolute z-10 cursor-pointer size-6 opacity-0"
-        checked={theme === "light"}
-        onChange={() => {
-          if (theme === "dark") {
-            return setTheme("light");
-          }
-          return setTheme("dark");
-        }}
-      />
-      <label className="relative cursor-pointer p-2">
-        <div className="flex items-center border border-zinc-800 p-2 rounded-md">
-          <span className="block dark:hidden text-zinc-800">
-            <SlCup size={25} />
-          </span>
-          <span className="hidden dark:block text-purple">
-            <SlGhost size={25} />
-          </span>
-        </div>
-        <span className="sr-only">Switch to light / dark version</span>
-      </label>
-    </div>
+    <span className="relative cursor-pointer p-2" onClick={toggleTheme}>
+      <div className="group flex items-center border border-zinc-800 hover:bg-zinc-800 dark:border-purple dark:hover:bg-purple p-2 rounded-md transition">
+        <span className="block dark:hidden text-zinc-800 group-hover:text-white transition">
+          <SlCup size={25} />
+        </span>
+        <span className="hidden dark:block text-purple dark:group-hover:text-white transition">
+          <SlGhost size={25} />
+        </span>
+      </div>
+      <span className="sr-only">Switch to light / dark version</span>
+    </span>
   );
 }
