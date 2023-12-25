@@ -2,13 +2,20 @@
 import DynamicSlIcon from "@/components/DynamicSlIcon";
 import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
+import { getLang } from "@/tools/getLang";
 import { watchInView } from "@/tools/watchInView";
 import { TitlesData } from "@/types/titles";
 import { useRef } from "react";
 
 interface SkillsDataProps {
-  title: string;
-  description: string;
+  title: {
+    pt: string;
+    en: string;
+  };
+  description: {
+    pt: string;
+    en: string;
+  };
   slIconName: string;
 }
 
@@ -18,6 +25,13 @@ interface SKillsProps {
 }
 
 const Skills = ({ titlesData, skillsData }: SKillsProps) => {
+  const lang = getLang();
+
+  const { title, subtitle } = {
+    title: titlesData.skillsTitle[lang],
+    subtitle: titlesData.skillsSubTitle[lang],
+  };
+
   const ref = useRef(null);
   watchInView({ ref, id: "skills" });
 
@@ -28,10 +42,7 @@ const Skills = ({ titlesData, skillsData }: SKillsProps) => {
         id="skills"
         ref={ref}
       >
-        <SectionHeading
-          title={titlesData.skillsTitle}
-          subtitle={titlesData.skillsSubTitle}
-        />
+        <SectionHeading title={title} subtitle={subtitle} />
         <div className="section-padding max-width grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] tablet:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3 tablet:gap-6">
           {skillsData.map((skill, index) => {
             return (
@@ -48,10 +59,10 @@ const Skills = ({ titlesData, skillsData }: SKillsProps) => {
                 </div>
                 <div className="text-center">
                   <h4 className="text-grey-700 dark:text-zinc-100">
-                    {skill.title}
+                    {skill.title[lang]}
                   </h4>
                   <p className="text-grey-600 dark:text-zinc-100">
-                    {skill.description}
+                    {skill.description[lang]}
                   </p>
                 </div>
               </div>
