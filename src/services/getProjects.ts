@@ -6,6 +6,7 @@ export const getProjects = async () => {
         title,
         description,
         link,
+        type,
         image{
           asset -> {
             url

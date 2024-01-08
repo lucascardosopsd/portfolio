@@ -47,5 +47,10 @@ export default {
       type: "url",
       title: "Link",
     },
+    {
+      name: "type",
+      title: "Tipo",
+      type: "string",
+    },
   ],
 };

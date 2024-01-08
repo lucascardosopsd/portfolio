@@ -23,6 +23,7 @@ interface ProjectsDataProps {
     };
   };
   link: string;
+  type: string;
 }
 
 interface ProjectsProps {
@@ -63,8 +64,13 @@ const Portfolio = ({ titlesData, projectsData }: ProjectsProps) => {
                   className="object-cover"
                 />
               </div>
-              <div className="text-center group-hover:scale-110 transition">
-                <h4 className="text-purple">{project.title[lang]}</h4>
+              <div className="flex flex-col items-center text-center group-hover:scale-110 transition">
+                <div className="flex relative">
+                  <h4 className="text-purple">{project.title[lang]}</h4>
+                  <h4 className="bg-purple text-white rounded text-xs flex items-center justify-center p-2 absolute -right-12 top-0">
+                    {project.type}
+                  </h4>
+                </div>
                 <p className="text-grey-600 dark:text-zinc-100">
                   {project.description[lang]}
                 </p>
