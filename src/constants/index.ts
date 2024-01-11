@@ -1,5 +1,4 @@
 "use client";
-
 import { Mail, MapPin, Phone } from "lucide-react";
 import {
   SlDirections,
@@ -8,8 +7,8 @@ import {
   SlPeople,
   SlWallet,
 } from "react-icons/sl";
-import { CiLinkedin } from "react-icons/ci";
-import { PiWhatsappLogoThin } from "react-icons/pi";
+import LinkedinIcon from "@/components/icons/Linkedin";
+import WhatsappIcon from "@/components/icons/Whatsapp";
 
 export const navLinks = [
   {
@@ -260,12 +259,12 @@ export const faqs = [
 export const socialLinks = [
   {
     id: 2,
-    icon: CiLinkedin,
+    icon: LinkedinIcon,
     url: "https://www.linkedin.com/in/lcpsd/",
   },
   {
     id: 3,
-    icon: PiWhatsappLogoThin,
+    icon: WhatsappIcon,
     url: "https://api.whatsapp.com/send?phone=5517996484654",
   },
 ];
