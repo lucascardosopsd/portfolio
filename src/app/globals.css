@@ -60,11 +60,11 @@
   }
 
   .btn {
-    @apply flex items-center justify-center gap-2 rounded px-5 py-3.5 capitalize text-zinc-700;
+    @apply flex items-center justify-center gap-2 rounded px-3 py-2 capitalize text-zinc-700 text-sm;
   }
 
   .btn-primary {
-    @apply text-zinc-200 bg-zinc-900;
+    @apply text-zinc-200 bg-zinc-900 border border-zinc-200 rounded hover:text-zinc-900 hover:bg-slate-200 transition;
   }
 
   input,

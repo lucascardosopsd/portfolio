@@ -20,31 +20,31 @@ export const navLinks = [
   },
   {
     label: {
-      pt: "Habilidades",
-      en: "Skills",
-    },
-    url: "#skills",
-  },
-  {
-    label: {
-      pt: "Vantagens",
-      en: "Benefits",
-    },
-    url: "#benefits",
-  },
-  {
-    label: {
       pt: "Portfolio",
       en: "Portfolio",
     },
-    url: "#portfolio",
+    url: "#Portfolio",
   },
   {
     label: {
-      pt: "Tecnologias",
+      pt: "Techs",
       en: "Techs",
     },
     url: "#techs",
+  },
+  {
+    label: {
+      pt: "Contato",
+      en: "Contact",
+    },
+    url: "#contact",
+  },
+  {
+    label: {
+      pt: "Faq",
+      en: "Faq",
+    },
+    url: "#faq",
   },
 ];
 export const skills = [
@@ -114,98 +114,6 @@ export const benefits = [
     name: "Habilidade com tecnologias avançadas",
     description:
       "Com experiência em HTML, CSS, JavaScript e tecnologias front-end de ponta, possuo a habilidade técnica para concretizar seus conceitos de design. Desde animações fluidas até recursos interativos, eu aproveito as mais recentes tecnologias para elevar o envolvimento do usuário e proporcionar uma experiência dinâmica.",
-  },
-];
-export const portfolios = [
-  {
-    id: 1,
-    title: "Z - Aura Perfume Website",
-    description:
-      "Et nisi voluptate nulla ea mollit excepteur culpa. Labore non labore nostrud amet exercitation ad do enim laborum ea quis nulla. Mollit magna amet sunt tempor. Sunt tempor cupidatat mollit velit velit sint aliqua cillum id. Aliquip aliqua qui anim sunt.",
-    link: "#",
-    image: "/images/UI.png",
-  },
-  {
-    id: 2,
-    title: "Forhelp Charity Website",
-    description:
-      "Et nisi voluptate nulla ea mollit excepteur culpa. Labore non labore nostrud amet exercitation ad do enim laborum ea quis nulla. Mollit magna amet sunt tempor. Sunt tempor cupidatat mollit velit velit sint aliqua cillum id. Aliquip aliqua qui anim sunt.",
-    link: "#",
-    image: "/images/UI.png",
-  },
-  {
-    id: 3,
-    title: "Skill Bridge Website",
-    description:
-      "Et nisi voluptate nulla ea mollit excepteur culpa. Labore non labore nostrud amet exercitation ad do enim laborum ea quis nulla. Mollit magna amet sunt tempor. Sunt tempor cupidatat mollit velit velit sint aliqua cillum id. Aliquip aliqua qui anim sunt.",
-    link: "#",
-    image: "/images/UI.png",
-  },
-  {
-    id: 4,
-    title: "Current Vandi Website",
-    description:
-      "Et nisi voluptate nulla ea mollit excepteur culpa. Labore non labore nostrud amet exercitation ad do enim laborum ea quis nulla. Mollit magna amet sunt tempor. Sunt tempor cupidatat mollit velit velit sint aliqua cillum id. Aliquip aliqua qui anim sunt.",
-    link: "#",
-    image: "/images/UI.png",
-  },
-];
-
-export const techs = [
-  {
-    id: 0,
-    title: "Typescript",
-    logo: "/images/typescript-logo.png",
-  },
-  {
-    id: 1,
-    title: "React",
-    logo: "/images/react-logo.png",
-  },
-  {
-    id: 2,
-    title: "Node.js",
-    logo: "/images/node-logo.png",
-  },
-  {
-    id: 3,
-    title: "Nextjs",
-    logo: "/images/next-logo.svg",
-  },
-  {
-    id: 4,
-    title: "Tailwind",
-    logo: "/images/tailwind-logo.png",
-  },
-  {
-    id: 5,
-    title: "PrismaORM",
-    logo: "/images/prisma-logo.png",
-  },
-  {
-    id: 6,
-    title: "PostgreSQL",
-    logo: "/images/posgres-logo.png",
-  },
-  {
-    id: 7,
-    title: "MongoDB",
-    logo: "/images/mongodb-logo.svg",
-  },
-  {
-    id: 8,
-    title: "Framer Motion",
-    logo: "/images/framer-motion.svg",
-  },
-  {
-    id: 9,
-    title: "Express",
-    logo: "/images/express-logo.png",
-  },
-  {
-    id: 10,
-    title: "Git/Github",
-    logo: "/images/git-logo.png",
   },
 ];
 
