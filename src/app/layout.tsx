@@ -9,11 +9,27 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Dev Lucas Cardoso",
-  description:
-    "Desenvolvimento de sites e aplicações com as tenologias mais modernas",
   openGraph: {
-    images: "/images/dev.png",
+    title: "Lucas Cardoso | Desenvolvedor",
+    description:
+      "Desenvolvimento de sites e aplicações com as tenologias mais modernas.",
+    url: "https://kellyalves.vercel.app/",
+    siteName: "Lucas Cardoso",
+    images: [
+      {
+        url: "http://localhost:3000/images/open-graph.png",
+        width: 800,
+        height: 600,
+      },
+      {
+        url: "http://localhost:3000/images/open-graph.png",
+        width: 1800,
+        height: 1600,
+        alt: "Lucas Cardoso",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
   },
 };
 
@@ -23,8 +39,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
-      <body className={`bg-peach-100 dark:bg-zinc-800 ${poppins.className}`}>
+    <html lang="pt-BR" className="!scroll-smooth" suppressHydrationWarning>
+      <body className={`bg-beige-300 ${poppins.className}`}>
         <Theme>{children}</Theme>
       </body>
     </html>

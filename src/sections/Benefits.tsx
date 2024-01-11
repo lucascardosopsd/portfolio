@@ -31,7 +31,7 @@ const Benefits = ({ titlesData, benefitsData }: BenefitsProps) => {
   return (
     <FadeDiv>
       <section
-        className="max-width section-padding border-t border- dark:border-zinc-600 bg-purple"
+        className="max-width section-padding border-t border-zinc-600 bg-purple"
         id="benefits"
         ref={ref}
       >
@@ -46,7 +46,7 @@ const Benefits = ({ titlesData, benefitsData }: BenefitsProps) => {
               <h5 className="text-purple mb-2 text-center ">
                 {benefit.title[lang]}
               </h5>
-              <p className="text-grey-600 text-center dark:text-zinc-100">
+              <p className="text-center text-zinc-100">
                 {benefit.description[lang]}
               </p>
             </div>
@@ -59,7 +59,7 @@ const Benefits = ({ titlesData, benefitsData }: BenefitsProps) => {
               <h5 className="text-purple mb-2 text-center">
                 {benefit.title[lang]}
               </h5>
-              <p className="text-grey-600 text-center dark:text-zinc-100">
+              <p className="text-center text-zinc-100">
                 {benefit.description[lang]}
               </p>
             </div>

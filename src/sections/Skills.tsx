@@ -33,7 +33,7 @@ const Skills = ({ titlesData, skillsData }: SKillsProps) => {
   return (
     <FadeDiv>
       <section
-        className="section-padding max-width border-t border-peach dark:border-zinc-600"
+        className="section-padding max-width border-t border-zinc-600"
         id="skills"
         ref={ref}
       >
@@ -56,12 +56,8 @@ const Skills = ({ titlesData, skillsData }: SKillsProps) => {
                   />
                 </div>
                 <div className="text-center">
-                  <h4 className="text-grey-700 dark:text-zinc-100">
-                    {skill.title[lang]}
-                  </h4>
-                  <p className="text-grey-600 dark:text-zinc-100">
-                    {skill.description[lang]}
-                  </p>
+                  <h4 className="text-zinc-100">{skill.title[lang]}</h4>
+                  <p className="text-zinc-100">{skill.description[lang]}</p>
                 </div>
               </div>
             );

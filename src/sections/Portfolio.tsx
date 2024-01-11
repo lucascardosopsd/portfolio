@@ -40,7 +40,7 @@ const Portfolio = ({ titlesData, projectsData }: ProjectsProps) => {
   return (
     <FadeDiv>
       <section
-        className="section-padding max-width border-t border-peach dark:border-zinc-600"
+        className="section-padding max-width border-t border-zinc-600"
         id="portfolio"
         ref={ref}
       >
@@ -56,7 +56,7 @@ const Portfolio = ({ titlesData, projectsData }: ProjectsProps) => {
               className="box flex flex-col items-center gap-5 border border-transparent hover:border-purple transition group cursor-pointer "
             >
               <div className="relative w-full h-80 overflow-hidden rounded flex items-center justify-center flex-shrink-0 mb-2 group-hover:scale-110 transition">
-                <div className="w-full h-8 absolute bottom-0 bg-gradient-to-t from-peach-600 dark:from-zinc-900 to-transparent z-10" />
+                <div className="w-full h-8 absolute bottom-0 bg-gradient-to-t from-zinc-900 to-transparent z-10" />
                 <Image
                   src={project.image.asset.url}
                   alt={project.title[lang]}
@@ -71,9 +71,7 @@ const Portfolio = ({ titlesData, projectsData }: ProjectsProps) => {
                     {project.type}
                   </h4>
                 </div>
-                <p className="text-grey-600 dark:text-zinc-100">
-                  {project.description[lang]}
-                </p>
+                <p className="text-zinc-100">{project.description[lang]}</p>
               </div>
             </Link>
           ))}
