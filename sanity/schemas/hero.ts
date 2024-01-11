@@ -4,8 +4,8 @@ export default {
   title: "Cabeçalho",
   fields: [
     {
-      name: "greeting",
-      title: "Saudação",
+      name: "leftTitle",
+      title: "Título Esquerdo",
       type: "object",
       fields: [
         {
@@ -22,8 +22,8 @@ export default {
     },
 
     {
-      name: "title",
-      title: "Título",
+      name: "leftDescription",
+      title: "Descrição Esquerda",
       type: "object",
       fields: [
         {
@@ -40,8 +40,8 @@ export default {
     },
 
     {
-      name: "subtitle",
-      title: "Sub Título",
+      name: "rightTitle",
+      title: "Título Esquerdo",
       type: "object",
       fields: [
         {
@@ -53,6 +53,61 @@ export default {
           title: "Inglês",
           name: "en",
           type: "string",
+        },
+      ],
+    },
+
+    {
+      name: "rightDescription",
+      title: "Descrição Esquerda",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
+    },
+
+    {
+      name: "highlights",
+      title: "Destaques",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          name: "highlight",
+          title: "Destaque",
+          fields: [
+            {
+              name: "title",
+              title: "Título",
+              type: "string",
+            },
+            {
+              name: "subTitle",
+              title: "Sub Título",
+              type: "object",
+              fields: [
+                {
+                  title: "Português",
+                  name: "pt",
+                  type: "string",
+                },
+                {
+                  title: "Inglês",
+                  name: "en",
+                  type: "string",
+                },
+              ],
+            },
+          ],
         },
       ],
     },

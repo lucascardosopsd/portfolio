@@ -4,8 +4,14 @@ export const getHero = async () => {
   const query = `
     *[_type == "hero"]{
         greeting,
-        title,
-        subtitle,
+        leftTitle,
+        leftDescription,
+        rightTitle,
+        rightDescription,
+        highlights[]{
+          title,
+          subTitle
+        },
         pic{
           asset -> {
             url
