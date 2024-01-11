@@ -4,6 +4,11 @@ export default {
   title: "Portfolio",
   fields: [
     {
+      name: "order",
+      title: "Posição",
+      type: "number",
+    },
+    {
       name: "title",
       title: "Título",
       type: "object",

@@ -17,7 +17,9 @@ export default async function Home() {
   const titlesData = await getTitles();
   const skillsData = await getSkills();
   const benefitsData = await getBenefits();
-  const portfolioData = await getPortfolio();
+  const portfolioData = (await getPortfolio()).sort(
+    (a, b) => a.order - b.order
+  );
   const techsData = await getTechs();
   const ctaData = await getCta();
 

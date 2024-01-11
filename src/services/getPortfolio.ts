@@ -1,8 +1,10 @@
+import { PortfolioDataProps } from "@/types/portfolio";
 import { client } from "../../sanity/lib/client";
 
 export const getPortfolio = async () => {
   const query = `
     *[_type == "portfolio"]{
+        order,
         title,
         description,
         link,
@@ -15,5 +17,5 @@ export const getPortfolio = async () => {
     }
     `;
 
-  return await client.fetch(query);
+  return (await client.fetch(query)) as PortfolioDataProps[];
 };

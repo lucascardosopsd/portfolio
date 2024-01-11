@@ -3,28 +3,11 @@ import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
 import { getLang } from "@/tools/getLang";
 import { watchInView } from "@/tools/watchInView";
+import { PortfolioDataProps } from "@/types/portfolio";
 import { TitlesData } from "@/types/titles";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-
-interface PortfolioDataProps {
-  title: {
-    pt: string;
-    en: string;
-  };
-  description: {
-    pt: string;
-    en: string;
-  };
-  image: {
-    asset: {
-      url: string;
-    };
-  };
-  link: string;
-  type: string;
-}
 
 interface PortfolioProps {
   titlesData: TitlesData;
