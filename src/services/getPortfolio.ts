@@ -1,8 +1,8 @@
 import { client } from "../../sanity/lib/client";
 
-export const getProjects = async () => {
+export const getPortfolio = async () => {
   const query = `
-    *[_type == "projects"]{
+    *[_type == "portfolio"]{
         title,
         description,
         link,

@@ -1,7 +1,7 @@
 export default {
-  name: "projects",
+  name: "portfolio",
   type: "document",
-  title: "Projetos/Portfolio",
+  title: "Portfolio",
   fields: [
     {
       name: "title",

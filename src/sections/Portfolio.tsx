@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
-interface ProjectsDataProps {
+interface PortfolioDataProps {
   title: {
     pt: string;
     en: string;
@@ -26,12 +26,12 @@ interface ProjectsDataProps {
   type: string;
 }
 
-interface ProjectsProps {
+interface PortfolioProps {
   titlesData: TitlesData;
-  projectsData: ProjectsDataProps[];
+  portfolioData: PortfolioDataProps[];
 }
 
-const Portfolio = ({ titlesData, projectsData }: ProjectsProps) => {
+const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
   const ref = useRef(null);
   watchInView({ ref, id: "portfolio" });
 
@@ -49,7 +49,7 @@ const Portfolio = ({ titlesData, projectsData }: ProjectsProps) => {
           subtitle={titlesData.portfolioSubTitle[lang]}
         />
         <div className="section-padding max-width grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] tablet:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3 tablet:gap-6">
-          {projectsData.map((project, index) => (
+          {portfolioData.map((project, index) => (
             <Link
               key={index}
               href={project.link}
