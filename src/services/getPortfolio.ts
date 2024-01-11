@@ -6,6 +6,7 @@ export const getPortfolio = async () => {
     *[_type == "portfolio"]{
         order,
         title,
+        subTitle,
         description,
         link,
         type,

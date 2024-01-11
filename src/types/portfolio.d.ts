@@ -4,6 +4,10 @@ export interface PortfolioDataProps {
     pt: string;
     en: string;
   };
+  subTitle: {
+    pt: string;
+    en: string;
+  };
   description: {
     pt: string;
     en: string;

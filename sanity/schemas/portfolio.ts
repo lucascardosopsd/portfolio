@@ -26,6 +26,23 @@ export default {
       ],
     },
     {
+      name: "subTitle",
+      title: "Sub Título",
+      type: "object",
+      fields: [
+        {
+          title: "Português",
+          name: "pt",
+          type: "string",
+        },
+        {
+          title: "Inglês",
+          name: "en",
+          type: "string",
+        },
+      ],
+    },
+    {
       name: "description",
       title: "Descrição",
       type: "object",
