@@ -6,22 +6,32 @@ import FadeDiv from "@/components/FadeDiv";
 import { socialLinks } from "@/constants";
 import { getLang } from "@/tools/getLang";
 import { HeroDataProps } from "@/types/hero";
+import { TitlesData } from "@/types/titles";
 
 interface HeroProps {
   data: HeroDataProps;
+  titlesData: TitlesData[];
 }
 
-const Hero = ({ data }: HeroProps) => {
+const Hero = ({ data, titlesData }: HeroProps) => {
   const lang = getLang();
-
+  const sectionId = "hero";
   const ref = useRef(null);
-  watchInView({ ref, id: "hero" });
+
+  const titleLeft = titlesData.filter(
+    (title) => title.section == "headerRight"
+  )[0];
+  const titleRight = titlesData.filter(
+    (title) => title.section == "headerRight"
+  )[0];
+
+  watchInView({ ref, id: sectionId });
 
   return (
     <FadeDiv>
       <section
         className="flex items-center justify-center max-width flex-col-reverse tablet:flex-row space-x-4 py-20 tablet:py-4 min-h-full tablet:!min-h-[calc(100svh-5rem)] relative"
-        id="hero"
+        id={sectionId}
         ref={ref}
       >
         {/* Absolute */}
@@ -43,8 +53,8 @@ const Hero = ({ data }: HeroProps) => {
         {/* Left */}
         <div className="flex-1 tablet:w:2/3 translate-y-10 tablet:mt-0 space-y-4">
           <div className="flex flex-col gap-3 items-center tablet:items-start max-w-2xl text-center tablet:text-left">
-            <h1 className="text-zinc-100">{data.leftTitle[lang]}</h1>
-            <p className="text-zinc-300">{data.leftDescription[lang]}</p>
+            <h1 className="text-zinc-100">{titleLeft.title[lang]}</h1>
+            <p className="text-zinc-300">{titleLeft.description[lang]}</p>
           </div>
 
           <div className="flex flex-col space-y-4">
@@ -80,10 +90,10 @@ const Hero = ({ data }: HeroProps) => {
         <div className="flex-1 tablet:w:2/3 tablet:mt-0 space-y-4 -translate-y-5">
           <div className="flex flex-col gap-3 items-center tablet:items-end max-w-2xl text-center tablet:text-left">
             <h1 className="text-zinc-100 text-center tablet:text-end  text-4xl">
-              {data.rightTitle[lang]}
+              {titleRight.title[lang]}
             </h1>
             <p className="text-zinc-300 text-center tablet:text-end">
-              {data.rightDescription[lang]}
+              {titleRight.description[lang]}
             </p>
           </div>
 

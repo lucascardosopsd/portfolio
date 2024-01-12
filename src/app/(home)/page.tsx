@@ -5,7 +5,6 @@ import { getTechs } from "@/services/getTechs";
 import Portfolio from "@/sections/Portfolio";
 import Techs from "@/sections/techs";
 import Hero from "@/sections/Hero";
-import { getFaq } from "@/services/getFaq";
 
 export default async function Home() {
   const heroData = await getHero();
@@ -13,15 +12,14 @@ export default async function Home() {
   const portfolioData = (await getPortfolio()).sort(
     (a, b) => a.order - b.order
   );
-  const faqData = (await getFaq()).sort((a, b) => a.order - b.order);
 
   const techsData = await getTechs();
 
   return (
     <>
-      <Hero data={heroData[0]} />
-      <Portfolio portfolioData={portfolioData} titlesData={titlesData[0]} />
-      <Techs techsData={techsData} titlesData={titlesData[0]} />
+      <Hero data={heroData[0]} titlesData={titlesData} />
+      <Portfolio portfolioData={portfolioData} titlesData={titlesData} />
+      <Techs techsData={techsData} titlesData={titlesData} />
     </>
   );
 }

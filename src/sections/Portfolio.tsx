@@ -10,21 +10,24 @@ import Link from "next/link";
 import { useRef } from "react";
 
 interface PortfolioProps {
-  titlesData: TitlesData;
+  titlesData: TitlesData[];
   portfolioData: PortfolioDataProps[];
 }
 
 const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
   const ref = useRef(null);
-  watchInView({ ref, id: "portfolio" });
-
   const lang = getLang();
+  const sectionId = "portfolio";
+
+  const titles = titlesData.filter((title) => title.section == sectionId)[0];
+
+  watchInView({ ref, id: sectionId });
 
   return (
     <FadeDiv>
       <section
         className="section-padding max-width border-t border-zinc-600 relative"
-        id="portfolio"
+        id={sectionId}
         ref={ref}
       >
         <Image
@@ -45,8 +48,8 @@ const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
           className="h-[300px] w-auto absolute right-20 bottom-40 hidden tablet:block"
         />
         <SectionHeading
-          title={titlesData.portfolioTitle[lang]}
-          subtitle={titlesData.portfolioSubTitle[lang]}
+          title={titles.title[lang]}
+          subtitle={titles.description[lang]}
         />
         <div className="flex flex-col items-center w-full">
           <div className="grid grid-col-1 ">

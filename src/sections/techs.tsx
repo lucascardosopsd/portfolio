@@ -18,15 +18,17 @@ interface TechsDataProps {
 }
 
 interface TechsProps {
-  titlesData: TitlesData;
+  titlesData: TitlesData[];
   techsData: TechsDataProps[];
 }
 
 const Techs = ({ titlesData, techsData }: TechsProps) => {
   const ref = useRef(null);
-  watchInView({ ref, id: "techs" });
-
   const lang = getLang();
+  const sectionId = "techs";
+  const titles = titlesData.filter((title) => title.section == sectionId)[0];
+
+  watchInView({ ref, id: "techs" });
 
   return (
     <FadeDiv>
@@ -36,8 +38,8 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
         ref={ref}
       >
         <SectionHeading
-          title={titlesData.techsTitle[lang]}
-          subtitle={titlesData.techsSubTitle[lang]}
+          title={titles.title[lang]}
+          subtitle={titles.description[lang]}
         />
         <div className="section-padding max-width grid grid-cols-2 tablet:grid-cols-4 gap-3 tablet:gap-6">
           {techsData
