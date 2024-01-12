@@ -1,5 +1,5 @@
-import { PortfolioDataProps } from "@/types/portfolio";
 import { client } from "../../sanity/lib/client";
+import { FaqDataProps } from "@/types/faq";
 
 export const getFaq = async () => {
   const query = `
@@ -10,5 +10,5 @@ export const getFaq = async () => {
     }
     `;
 
-  return (await client.fetch(query)) as PortfolioDataProps[];
+  return (await client.fetch(query)) as FaqDataProps[];
 };
