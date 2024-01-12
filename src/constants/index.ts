@@ -1,12 +1,5 @@
 "use client";
 import { Mail, MapPin, Phone } from "lucide-react";
-import {
-  SlDirections,
-  SlFrame,
-  SlNote,
-  SlPeople,
-  SlWallet,
-} from "react-icons/sl";
 import LinkedinIcon from "@/components/icons/Linkedin";
 import WhatsappIcon from "@/components/icons/Whatsapp";
 
@@ -47,120 +40,72 @@ export const navLinks = [
     url: "#faq",
   },
 ];
-export const skills = [
-  {
-    id: 1,
-    name: "Desenvolvedor Fullstack",
-    description:
-      "Desenvolvimento de aplicações web com as stacks mais modernas do mercado através de Typescript, do front-end ao back-end, ou seja, sua aplicação fica pronta desde o que o usuário vê até a lógica do servidor.",
-    icon: SlDirections,
-  },
-  {
-    id: 2,
-    name: "UI Designer",
-    description:
-      "Design de interfaces modernas, visando os aspectos mais atuais do design para não passar a ideia de que você é amador.",
-    icon: SlNote,
-  },
-  {
-    id: 3,
-    name: "UX Designer",
-    description:
-      "Elaboração de fluxo de uso da aplicação sempre visando a melhor experiência do usuário, pois ninguém merece um site cheio de problemas de usabilidade.",
-    icon: SlPeople,
-  },
-  {
-    id: 4,
-    name: "Responsividade",
-    description:
-      "Criação de aplicações que servem a qualquer tamanho de tela, do mobile ao desktop, pois não podemos ficar presos a um formato em um mundo tecnologicamente diversificado.",
-    icon: SlFrame,
-  },
-  {
-    id: 5,
-    name: "Código Fonte Como Ativo",
-    description:
-      "O código do site ou aplicação é como um ativo para a empresa, portanto é importante ser dono de fato do seu site e não uma empresa de criação de sites online. Por isso te entrego código e não um site feito de arrasa e solta.",
-    icon: SlWallet,
-  },
-];
-export const benefits = [
-  {
-    id: 1,
-    name: "Desenvolvimento customizado para atender seu negócio",
-    description:
-      "Sempre busco traduzir as necessidades e identidade da marca em um site único. Através da colaboração conjunta com o cliente, garanto que a aplicação reflita a personalidade, os valores e objetivos da marca. O resultado é uma plataforma customizada que se destaca entre os concorrentes",
-  },
-  {
-    id: 2,
-    name: "Programação criativa",
-    description:
-      "Com um olhar afiado para o estilo e muita criatividade, eu me especializo em programar sites visualmente incríveis e envolventes. Ao integrar estruturas de código elegantes, elementos interativos e princípios de design estratégicos, eu crio uma experiência de usuário imersiva e impactante. Seu site vai conquistar os visitantes, elevando a credibilidade e profissionalismo da sua marca.",
-  },
-  {
-    id: 3,
-    name: "Desenvolvimento centrado na experiência",
-    description:
-      "Dou prioridade ao desenvolvimento da experiência do usuário (UX), pensando nos seus visitantes durante todo o processo de codificação. Por meio de pesquisa extensiva e metodologias de teste com usuários, garanto que seu site seja intuitivo, fácil de navegar e guie os usuários de maneira eficaz. O resultado é uma jornada do usuário gratificante que impulsiona o envolvimento e as conversões.",
-  },
-  {
-    id: 4,
-    name: "Codigo otimizado para mobile",
-    description:
-      "No cenário atual impulsionado por dispositivos móveis, um site responsivo é essencial. Eu sou especializado em codificar designs compatíveis com dispositivos móveis que se adaptam perfeitamente a diferentes dispositivos e tamanhos de tela. Seu site manterá sua aparência e funcionalidade em computadores desktop, smartphones e tablets, permitindo que você alcance e envolva seu público de maneira eficaz.",
-  },
-  {
-    id: 5,
-    name: "Habilidade com tecnologias avançadas",
-    description:
-      "Com experiência em HTML, CSS, JavaScript e tecnologias front-end de ponta, possuo a habilidade técnica para concretizar seus conceitos de design. Desde animações fluidas até recursos interativos, eu aproveito as mais recentes tecnologias para elevar o envolvimento do usuário e proporcionar uma experiência dinâmica.",
-  },
-];
 
 export const faqs = [
   {
     id: 1,
-    question: "Você pode trabalhar remotamente com clientes?",
-    answer:
+    question_pt: "Você pode trabalhar remotamente com clientes?",
+    question_en: "Can you work remotely with clients?",
+    answer_pt:
       "Com certeza! Através de canais eficazes de comunicação, como e-mail, videochamadas e ferramentas de gerenciamento de projetos, garanto uma colaboração fluida, independentemente da localização geográfica.",
+    answer_en:
+      "Certainly! Through effective communication channels such as email, video calls, and project management tools, I ensure smooth collaboration regardless of geographical location.",
   },
   {
     id: 2,
-    question: "Você oferece serviços de manutenção de sites?",
-    answer:
-      "Sim, ofereço serviços de manutenção de sites desde que façam parte das tecnologias que sou familiarizado.",
+    question_pt: "Você oferece serviços de manutenção de sites?",
+    question_en: "Do you offer website maintenance services?",
+    answer_pt:
+      "Sim, ofereço serviços de manutenção de sites, desde que façam parte das tecnologias com as quais estou familiarizado.",
+    answer_en:
+      "Yes, I offer website maintenance services, provided they are within the technologies I am familiar with.",
   },
   {
     id: 3,
-    question: "Quais tipos de site você programa?",
-    answer:
+    question_pt: "Quais tipos de site você programa?",
+    question_en: "What types of websites do you program?",
+    answer_pt:
       "Ofereço a criação de qualquer tipo de aplicação, desde um simples site para portfólio até uma plataforma de e-commerce.",
+    answer_en:
+      "I offer the creation of any type of application, from a simple portfolio website to an e-commerce platform.",
   },
   {
     id: 4,
-    question: "Quais formas de pagamento são aceitas?",
-    answer:
-      "PIX e dinheiro, com o pagamento sendo repartido em 50% antes do inicio do projeto e 50% depois.",
+    question_pt: "Quais formas de pagamento são aceitas?",
+    question_en: "What forms of payment are accepted?",
+    answer_pt:
+      "PIX e dinheiro, com o pagamento sendo dividido em 50% antes do início do projeto e 50% depois.",
+    answer_en:
+      "PIX and cash, with payment divided into 50% before the start of the project and 50% afterward.",
   },
   {
     id: 5,
-    question: "Como funciona o processo de criação do site?",
-    answer:
-      "Conversamos sobre suas expectativas pessoalmente ou através de vídeo chamada. A partir dai, avalio nossa conversa separadamente e estabaleço um orçamento. Após isto, nos reunimos para firmar um contrato e receber o pagamento do sinal. Então elaboramos o aspecto visual da aplicação e após aprovação do mesmo, parto para o desenvolvimento em código, onde ao final entrego um site hospedado e com domínio por 1 ano.",
+    question_pt: "Como funciona o processo de criação do site?",
+    question_en: "How does the website creation process work?",
+    answer_pt:
+      "Conversamos sobre suas expectativas pessoalmente ou através de vídeo chamada. A partir daí, avalio nossa conversa separadamente e estabeleço um orçamento. Após isso, nos reunimos para firmar um contrato e receber o pagamento do sinal. Em seguida, elaboramos o aspecto visual da aplicação e, após aprovação do mesmo, parto para o desenvolvimento em código, onde, ao final, entrego um site hospedado e com domínio por 1 ano.",
+    answer_en:
+      "We discuss your expectations in person or via video call. From there, I assess our conversation separately and establish a budget. After that, we meet to finalize a contract and receive the down payment. Then, we develop the visual aspect of the application, and upon its approval, I proceed to code development. Finally, I deliver a hosted website with a domain for 1 year.",
   },
   {
     id: 6,
-    question:
+    question_pt:
       "E se eu quiser adicionar mais itens após o fechamento do desenvolvimento?",
-    answer:
-      "Se for o caso da adição de funcionalidades após a finalização da criação da aplicação, avalio a complexidade do peido e estabeleço um valor a parte.",
+    question_en:
+      "What if I want to add more items after the development is closed?",
+    answer_pt:
+      "Se for o caso da adição de funcionalidades após a finalização da criação da aplicação, avalio a complexidade do pedido e estabeleço um valor à parte.",
+    answer_en:
+      "If there's a need to add functionalities after the completion of the application, I assess the complexity of the request and establish a separate fee.",
   },
-
   {
     id: 7,
-    question: "Como funciona o suporte?",
-    answer:
+    question_pt: "Como funciona o suporte?",
+    question_en: "How does support work?",
+    answer_pt:
       "O suporte é gratuito apenas para problemas técnicos derivados do desenvolvimento e hospedagem.",
+    answer_en:
+      "Support is free only for technical issues derived from development and hosting.",
   },
 ];
 
