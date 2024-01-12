@@ -1,7 +1,7 @@
 export default {
-  name: "benefits",
+  name: "faq",
   type: "document",
-  title: "Vantagens",
+  title: "FAQ",
   fields: [
     {
       name: "title",
@@ -20,6 +20,7 @@ export default {
         },
       ],
     },
+
     {
       name: "description",
       title: "Descrição",
