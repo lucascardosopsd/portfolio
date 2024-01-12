@@ -47,6 +47,14 @@
 }
 
 @layer utilities {
+  .line-0 {
+    line-height: 0;
+  }
+
+  .line-full {
+    line-height: normal;
+  }
+
   .max-width {
     @apply max-w-[1920px] mx-auto px-[16px] tablet:px-[80px] desktop:px-[162px];
   }
