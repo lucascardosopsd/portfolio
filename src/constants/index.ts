@@ -23,7 +23,7 @@ export const navLinks = [
       pt: "Portfolio",
       en: "Portfolio",
     },
-    url: "#Portfolio",
+    url: "#portfolio",
   },
   {
     label: {

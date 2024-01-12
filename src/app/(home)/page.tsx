@@ -26,10 +26,10 @@ export default async function Home() {
   return (
     <>
       <Hero data={heroData[0]} />
-      <Skills skillsData={skillsData} titlesData={titlesData[0]} />
       <Portfolio portfolioData={portfolioData} titlesData={titlesData[0]} />
-      <Benefits benefitsData={benefitsData} titlesData={titlesData[0]} />
       <Techs techsData={techsData} titlesData={titlesData[0]} />
+      <Skills skillsData={skillsData} titlesData={titlesData[0]} />
+      <Benefits benefitsData={benefitsData} titlesData={titlesData[0]} />
       <CTA ctaData={ctaData[0]} />
     </>
   );

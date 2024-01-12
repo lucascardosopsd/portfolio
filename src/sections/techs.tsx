@@ -47,16 +47,20 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
                 key={index}
                 className="box transition flex flex-col items-center gap-5 hover:border-purple"
               >
-                <div className="w-16 h-16flex items-center justify-center flex-shrink-0 mb-2">
+                <div className="w-20 h-20 flex items-center justify-center flex-shrink-0 mb-2 relative">
                   <Image
                     src={tech.logo.asset.url}
                     alt={tech.title}
-                    height={100}
-                    width={100}
+                    height={0}
+                    width={0}
+                    sizes="100vh"
+                    className="h-full w-full object-fill"
                   />
                 </div>
-                <div className="text-center">
-                  <h4 className="text-zinc-100">{tech.title}</h4>
+                <div className="flex items-center justify-center h-10">
+                  <p className="text-zinc-100 text-lg font-light">
+                    {tech.title}
+                  </p>
                 </div>
               </div>
             ))}
