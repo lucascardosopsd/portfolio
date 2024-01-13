@@ -1,21 +1,14 @@
 import { ContactEmailTemplate } from "@/components/ContactEmailTemplate";
-import { ContactFormSchemaProps } from "@/validators/contact";
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest } from "next";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-interface ExtendedNextApiRequest extends NextApiRequest {
-  body: ContactFormSchemaProps;
-}
-
-export async function POST(req: ExtendedNextApiRequest, res: NextApiResponse) {
-  console.log(req.body);
-
+export async function POST(req: NextApiRequest) {
   try {
     await resend.emails.send({
-      from: req.body.email ? req.body.email : "clientPortfolio@dev.com",
+      from: req?.body?.email ? req?.body?.email : "clientPortfolio@dev.com",
       to: ["lucascardosopsd@gmail.com"],
       subject: "Novo Cliente!",
       text: "",
