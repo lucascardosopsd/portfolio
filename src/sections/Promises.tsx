@@ -62,6 +62,11 @@ const Promises = ({ titlesData, promisesData }: PromissesProps) => {
             </Link>
           </div>
         </div>
+        <p className="max-w-[800px] text-center text-sm text-zinc-500 mt-4">
+          {lang == "pt"
+            ? "A autenticação depende da necessidade da aplicação | O suporte é para problemas relacionados ao desenvolvimento e hospedagem | O CMS será necessário dependendo do tipo de aplicação."
+            : "Authentication depends on the application's needs. Support is for issues related to development and hosting. The CMS will be necessary depending on the type of application."}
+        </p>
       </section>
     </FadeDiv>
   );
