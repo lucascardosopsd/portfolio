@@ -144,6 +144,7 @@ const Budget = ({ titlesData }: ContactProps) => {
                     <Textarea
                       placeholder={lang == "pt" ? "Digite ..." : "Message..."}
                       {...field}
+                      className="rounded"
                     />
                   </FormControl>
                   <FormMessage />
