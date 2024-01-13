@@ -28,7 +28,7 @@ const Footer = () => {
               key={index}
               className="w-10 h-10 bg-purple text-peach flex items-center justify-center rounded"
             >
-              <link.icon strokeWidth={0} fill="currentColor" />
+              <link.icon size={24} />
             </a>
           ))}
         </div>
