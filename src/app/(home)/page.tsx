@@ -7,6 +7,7 @@ import Techs from "@/sections/techs";
 import Hero from "@/sections/Hero";
 import { getFaq } from "@/services/getFaq";
 import Faq from "@/sections/Faq";
+import Contact from "@/sections/Contact";
 
 export default async function Home() {
   const heroData = await getHero();
@@ -24,6 +25,7 @@ export default async function Home() {
       <Portfolio portfolioData={portfolioData} titlesData={titlesData} />
       <Techs techsData={techsData} titlesData={titlesData} />
       <Faq faqData={faqData} titlesData={titlesData} />
+      <Contact titlesData={titlesData} />
     </>
   );
 }
