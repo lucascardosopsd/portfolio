@@ -26,7 +26,7 @@ const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
   return (
     <FadeDiv>
       <section
-        className="section-padding max-width border-t border-zinc-600 relative bg-red-500"
+        className="section-padding max-width border-t border-zinc-600 relative "
         id={sectionId}
         ref={ref}
       >
