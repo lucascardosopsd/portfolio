@@ -18,6 +18,7 @@ import { TitlesData } from "@/types/titles";
 import { ContactFormSchemaProps, useContactForm } from "@/validators/contact";
 import { useRef } from "react";
 import axios from "axios";
+import { Textarea } from "@/components/ui/textarea";
 
 interface ContactProps {
   titlesData: TitlesData[];
@@ -135,7 +136,7 @@ const Budget = ({ titlesData }: ContactProps) => {
                 <FormItem>
                   <FormLabel>{lang == "pt" ? "Mensagem" : "Message"}</FormLabel>
                   <FormControl>
-                    <Input
+                    <Textarea
                       placeholder={lang == "pt" ? "Digite ..." : "Message..."}
                       {...field}
                     />
