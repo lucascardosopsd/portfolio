@@ -1,5 +1,5 @@
 interface LinkedinIconProps {
-  size: number;
+  size?: number;
   color?: string;
 }
 

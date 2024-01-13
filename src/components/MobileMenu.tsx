@@ -3,7 +3,7 @@ import { Menu, Phone, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import NavLink from "./CustomLink";
-import { navLinks, socialLinks } from "../constants";
+import { navLinks } from "../constants";
 import { getLang } from "@/tools/getLang";
 
 const MobileMenu = () => {
@@ -63,18 +63,6 @@ const MobileMenu = () => {
             </Link>
           </ul>
         </nav>
-
-        <div className="w-full h-20 flex items-center justify-around max-width border-t border-zinc-600">
-          {socialLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              className="text-purple hover:text-purple transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
       </div>
     </div>
   );
