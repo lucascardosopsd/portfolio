@@ -13,6 +13,7 @@ export const watchInView = ({ ref, id }: WatchInViewProps) => {
 
   useEffect(() => {
     if (isInView) {
+      console.log(id);
       setCurrentDivId(id);
     }
   }, [isInView]);

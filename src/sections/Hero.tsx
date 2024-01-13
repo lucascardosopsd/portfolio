@@ -30,7 +30,7 @@ const Hero = ({ data, titlesData }: HeroProps) => {
   return (
     <FadeDiv>
       <section
-        className="flex items-center justify-center max-width flex-col-reverse tablet:flex-row space-x-4 py-20 tablet:py-4 min-h-full tablet:!min-h-[calc(100svh-5rem)] relative"
+        className="flex items-center justify-center max-width flex-col-reverse tablet:flex-row space-x-4 py-20 tablet:py-4 tablet:!min-h-[calc(100svh-5rem)] relative mb-[6rem]"
         id={sectionId}
         ref={ref}
       >
