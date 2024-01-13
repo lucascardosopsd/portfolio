@@ -28,13 +28,13 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
   const sectionId = "techs";
   const titles = titlesData.filter((title) => title.section == sectionId)[0];
 
-  watchInView({ ref, id: "techs" });
+  watchInView({ ref, id: sectionId });
 
   return (
     <FadeDiv>
       <section
         className="section-padding max-width border-t border-zinc-600"
-        id="techs"
+        id={sectionId}
         ref={ref}
       >
         <SectionHeading

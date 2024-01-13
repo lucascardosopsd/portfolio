@@ -13,6 +13,13 @@ export const navLinks = [
   },
   {
     label: {
+      pt: "Escopo",
+      en: "Scope",
+    },
+    url: "#promises",
+  },
+  {
+    label: {
       pt: "Portfolio",
       en: "Portfolio",
     },
