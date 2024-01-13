@@ -19,7 +19,7 @@ const Hero = ({ data, titlesData }: HeroProps) => {
   const ref = useRef(null);
 
   const titleLeft = titlesData.filter(
-    (title) => title.section == "headerRight"
+    (title) => title.section == "headerLeft"
   )[0];
   const titleRight = titlesData.filter(
     (title) => title.section == "headerRight"
