@@ -16,7 +16,7 @@ import { getLang } from "@/tools/getLang";
 import { watchInView } from "@/tools/watchInView";
 import { TitlesData } from "@/types/titles";
 import { ContactFormSchemaProps, useContactForm } from "@/validators/contact";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import axios from "axios";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -30,11 +30,14 @@ const Budget = ({ titlesData }: ContactProps) => {
   const ref = useRef(null);
   const lang = getLang();
   const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
 
   const form = useContactForm(lang);
 
   const onSubmit = async (formData: ContactFormSchemaProps) => {
     try {
+      setLoading(true);
+
       await axios.post("/api/email/send", formData);
 
       toast({
@@ -44,6 +47,8 @@ const Budget = ({ titlesData }: ContactProps) => {
             ? "Entrarei em contato assim que possível. Obrigado pelo interesse!"
             : "Your e-mail has sended and i'll contact you as soon as possible. Thank you!",
       });
+
+      setLoading(false);
     } catch (error) {}
   };
 
@@ -108,7 +113,7 @@ const Budget = ({ titlesData }: ContactProps) => {
                   </FormItem>
                 )}
               />
-              <p className="tablet:mt-6">{lang == "pt" ? "ou" : "or"}</p>
+              <p>{lang == "pt" ? "ou" : "or"}</p>
               <FormField
                 control={form.control}
                 name="email"
@@ -146,7 +151,7 @@ const Budget = ({ titlesData }: ContactProps) => {
               )}
             />
 
-            <Button type="submit" variant="outline">
+            <Button type="submit" variant="outline" disabled={loading}>
               {lang == "pt" ? "Enviar" : "Send"}
             </Button>
           </form>
