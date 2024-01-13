@@ -8,8 +8,6 @@ export const getLang = () => {
   useEffect(() => {
     const lang = navigator.language.split("-")[0];
 
-    console.log(lang);
-
     if (lang !== "pt" || "en") {
       setLang("en");
     }

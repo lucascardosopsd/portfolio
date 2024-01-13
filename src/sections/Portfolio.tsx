@@ -54,7 +54,7 @@ const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
         <div className="flex flex-col items-center w-full">
           <div className="grid grid-col-1 ">
             {portfolioData.map((project, index) => (
-              <div className="relative">
+              <div className="relative" key={index}>
                 <Image
                   src="/images/illustration-3.svg"
                   alt="Project"

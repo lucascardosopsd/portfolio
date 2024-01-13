@@ -42,7 +42,7 @@ const Faq = ({ titlesData, faqData }: FaqProps) => {
 
         <div className="grid grid-col-1 gap-2 max-w-[600px] mx-auto">
           {faqData.map((faq, index) => (
-            <Accordion type="single" collapsible>
+            <Accordion type="single" collapsible key={index}>
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-sm border border-zinc-600 rounded px-4">
                   {faq.title[lang]}
