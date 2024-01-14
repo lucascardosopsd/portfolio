@@ -81,7 +81,7 @@ const Hero = ({ data, titlesData }: HeroProps) => {
               height={0}
               width={0}
               sizes="100vh"
-              className="object-cover h-full w-full max-h-[700px]"
+              className="object-contain tablet:object-cover h-full w-full max-h-[700px]"
             />
           </div>
         </div>
