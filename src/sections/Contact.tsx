@@ -19,6 +19,7 @@ import { ContactFormSchemaProps, useContactForm } from "@/validators/contact";
 import { useRef, useState } from "react";
 import axios from "axios";
 import { Textarea } from "@/components/ui/textarea";
+import Image from "next/image";
 
 interface ContactProps {
   titlesData: TitlesData[];
@@ -57,10 +58,28 @@ const Budget = ({ titlesData }: ContactProps) => {
   return (
     <FadeDiv>
       <section
-        className="section-padding max-width border-t border-zinc-600"
+        className="section-padding max-width border-t border-zinc-600 relative"
         id={sectionId}
         ref={ref}
       >
+        <Image
+          src="/images/illustration-12.svg"
+          alt="Illustration"
+          height={0}
+          width={0}
+          sizes="100vh"
+          className="h-[400px] w-auto absolute left-10 top-10 hidden tablet:block -z-10"
+        />
+
+        <Image
+          src="/images/illustration-12.svg"
+          alt="Illustration"
+          height={0}
+          width={0}
+          sizes="100vh"
+          className="h-[400px] w-auto absolute right-10 bottom-10 hidden tablet:block -z-10"
+        />
+
         <SectionHeading
           title={titles.title[lang]}
           subtitle={titles.description[lang]}

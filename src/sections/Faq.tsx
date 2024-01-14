@@ -13,6 +13,7 @@ import { watchInView } from "@/tools/watchInView";
 import { FaqDataProps } from "@/types/faq";
 import { TitlesData } from "@/types/titles";
 import { useRef } from "react";
+import Image from "next/image";
 
 interface FaqProps {
   titlesData: TitlesData[];
@@ -31,10 +32,28 @@ const Faq = ({ titlesData, faqData }: FaqProps) => {
   return (
     <FadeDiv>
       <section
-        className="section-padding max-width border-t border-zinc-600"
+        className="section-padding max-width border-t border-zinc-600 relative"
         id={sectionId}
         ref={ref}
       >
+        <Image
+          src="/images/illustration-4.svg"
+          alt="Illustration"
+          height={0}
+          width={0}
+          sizes="100vh"
+          className="h-[200px] w-auto absolute left-10 top-10 hidden tablet:block -z-10"
+        />
+
+        <Image
+          src="/images/illustration-5.svg"
+          alt="Illustration"
+          height={0}
+          width={0}
+          sizes="100vh"
+          className="h-[200px] w-auto absolute right-10 bottom-10 hidden tablet:block -z-10"
+        />
+
         <SectionHeading
           title={titles.title[lang]}
           subtitle={titles.description[lang]}

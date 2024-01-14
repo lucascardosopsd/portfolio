@@ -32,7 +32,7 @@ const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
       >
         <Image
           src="/images/illustration-1.svg"
-          alt="Project"
+          alt="Illustration"
           height={0}
           width={0}
           sizes="100vh"
@@ -41,7 +41,7 @@ const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
 
         <Image
           src="/images/illustration-2.svg"
-          alt="Project"
+          alt="Illustration"
           height={0}
           width={0}
           sizes="100vh"

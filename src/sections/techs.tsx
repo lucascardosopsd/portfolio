@@ -33,7 +33,7 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
   return (
     <FadeDiv>
       <section
-        className="section-padding max-width border-t border-zinc-600"
+        className="section-padding max-width border-t border-zinc-600 relative"
         id={sectionId}
         ref={ref}
       >
@@ -41,13 +41,32 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
           title={titles.title[lang]}
           subtitle={titles.description[lang]}
         />
+
+        <Image
+          src="/images/illustration-8.svg"
+          alt="Illustration"
+          height={0}
+          width={0}
+          sizes="100vh"
+          className="h-[200px] w-auto absolute left-10 top-10 hidden tablet:block -z-10"
+        />
+
+        <Image
+          src="/images/illustration-10.svg"
+          alt="Illustration"
+          height={0}
+          width={0}
+          sizes="100vh"
+          className="h-[200px] w-auto absolute right-10 bottom-10 hidden tablet:block -z-10"
+        />
+
         <div className="section-padding max-width grid grid-cols-2 tablet:grid-cols-4 gap-3 tablet:gap-6">
           {techsData
             .sort((a, b) => a.order - b.order)
             .map((tech, index) => (
               <div
                 key={index}
-                className="box transition flex flex-col items-center gap-5 hover:border-purple"
+                className="box transition flex flex-col items-center gap-5 hover:border-zinc-800"
               >
                 <div className="w-20 h-20 flex items-center justify-center flex-shrink-0 mb-2 relative">
                   <Image
