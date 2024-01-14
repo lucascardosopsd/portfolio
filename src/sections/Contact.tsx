@@ -20,6 +20,9 @@ import { useRef, useState } from "react";
 import axios from "axios";
 import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
+import WhatsappIcon from "@/components/icons/Whatsapp";
+import Link from "next/link";
+import { socialLinks } from "@/constants";
 
 interface ContactProps {
   titlesData: TitlesData[];
@@ -58,7 +61,7 @@ const Budget = ({ titlesData }: ContactProps) => {
   return (
     <FadeDiv>
       <section
-        className="section-padding max-width border-t border-zinc-600 relative"
+        className="section-padding max-width border-t border-zinc-600 relative flex flex-col items-center"
         id={sectionId}
         ref={ref}
       >
@@ -85,10 +88,20 @@ const Budget = ({ titlesData }: ContactProps) => {
           subtitle={titles.description[lang]}
         />
 
+        <Link href={socialLinks[1].url}>
+          <Button
+            variant="outline"
+            className="rounded gap-2 border-zinc-700 text-zinc-500"
+          >
+            <WhatsappIcon color="#71717a" />
+            <p className="font-light">Whatsapp</p>
+          </Button>
+        </Link>
+
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-8 max-w-[600px] mx-auto"
+            className="space-y-8 max-w-[600px] mx-auto w-full"
           >
             <FormField
               control={form.control}
