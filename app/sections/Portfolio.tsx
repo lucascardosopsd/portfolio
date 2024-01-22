@@ -66,7 +66,7 @@ const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
                 <div className="flex flex-col tablet:flex-row items-center tablet:gap-8 max-w-[500px] h-svh tablet:h-[80svh]">
                   <Link
                     href={project.link}
-                    className="relative w-full h-80 group flex-1 border border-transparent hover:bg-zinc-200 transition rounded"
+                    className="relative w-full h-[400px] group flex-1 border border-transparent hover:bg-zinc-200 transition rounded"
                     key={index}
                   >
                     <Image
@@ -78,7 +78,7 @@ const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
                       className="h-full w-full tablet:w-auto object-cover object-top tablet:object-center rounded"
                     />
                   </Link>
-                  <div className="flex flex-col gap-2 flex-[1.3] justify-center">
+                  <div className="flex flex-col gap-2 flex-1 justify-center">
                     <h2>{project.title[lang]}</h2>
                     <p className="text-lg">{project.subTitle[lang]}</p>
                     <p>{project.description[lang]}</p>
