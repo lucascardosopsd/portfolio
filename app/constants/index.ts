@@ -2,6 +2,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import LinkedinIcon from "@/components/icons/Linkedin";
 import WhatsappIcon from "@/components/icons/Whatsapp";
+import GitHubIcon from "@/components/icons/Github";
 
 export const navLinks = [
   {
@@ -49,6 +50,11 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
+  {
+    id: 1,
+    icon: GitHubIcon,
+    url: "https://github.com/lucascardosopsd",
+  },
   {
     id: 2,
     icon: LinkedinIcon,

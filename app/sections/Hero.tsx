@@ -7,6 +7,7 @@ import { socialLinks } from "@/constants";
 import { getLang } from "@/tools/getLang";
 import { HeroDataProps } from "@/types/hero";
 import { TitlesData } from "@/types/titles";
+import Link from "next/link";
 
 interface HeroProps {
   data: HeroDataProps;
@@ -50,13 +51,14 @@ const Hero = ({ data, titlesData }: HeroProps) => {
           <div className="flex flex-col space-y-4">
             <div className="flex justify-center tablet:justify-start gap-4">
               {socialLinks.map((link, index) => (
-                <a
+                <Link
+                  target="_blank"
                   href={link.url}
-                  className="w-10 h-10 bg-purple text-white flex items-center justify-center rounded"
+                  className="w-10 h-10 bg-purple text-white flex items-center justify-center rounded transition hover:scale-125"
                   key={index}
                 >
                   <link.icon size={36} />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
