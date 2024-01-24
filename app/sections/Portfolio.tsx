@@ -74,7 +74,7 @@ const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
                       alt="Project"
                       height={0}
                       width={0}
-                      sizes="100vh"
+                      sizes="2000px"
                       className="h-full w-full tablet:w-auto object-cover object-top tablet:object-center rounded"
                     />
                   </Link>

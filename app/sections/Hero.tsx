@@ -34,16 +34,6 @@ const Hero = ({ data, titlesData }: HeroProps) => {
         id={sectionId}
         ref={ref}
       >
-        {/* Absolute */}
-        <Image
-          src="/images/dashed-line.svg"
-          alt="Linha tracejada"
-          height={0}
-          width={0}
-          sizes="100vh"
-          className="h-full w-[40vw] max-w-[700px] absolute -z-20 hidden tablet:block top-0"
-        />
-
         <span className="font-black text-8xl text-zinc-600 hidden tablet:block">
           <p className="absolute -left-72 top-0">DESENVOLVEDOR</p>
 
@@ -80,7 +70,7 @@ const Hero = ({ data, titlesData }: HeroProps) => {
               alt="Foto Desenvolvedor"
               height={0}
               width={0}
-              sizes="100vh"
+              sizes="2000px"
               className="object-contain tablet:object-cover h-full w-full max-h-[700px]"
             />
           </div>
