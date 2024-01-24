@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     siteName: "Lucas Cardoso",
     images: [
       {
-        url: "http://localhost:3000/images/open-graph.png",
+        url: "https://i.imgur.com/9xNWux4.png",
         width: 800,
         height: 600,
       },
       {
-        url: "http://localhost:3000/images/open-graph.png",
+        url: "https://i.imgur.com/9xNWux4.png",
         width: 1800,
         height: 1600,
         alt: "Lucas Cardoso",
