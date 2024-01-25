@@ -59,16 +59,21 @@ const Hero = ({ data, titlesData }: HeroProps) => {
 
           <div className="flex flex-col space-y-4">
             <div className="flex justify-center tablet:justify-start gap-4">
-              {socialLinks.map((link, index) => (
-                <Link
-                  target="_blank"
-                  href={link.url}
-                  className="w-10 h-10 bg-purple text-white flex items-center justify-center rounded transition hover:scale-125"
-                  key={index}
-                >
-                  <link.icon size={36} />
-                </Link>
-              ))}
+              {Object.keys(socialLinks).map((key: string) => {
+                const url = socialLinks[key].url;
+                const Icon = socialLinks[key].icon;
+
+                return (
+                  <Link
+                    target="_blank"
+                    href={url}
+                    className="w-10 h-10 bg-purple text-white flex items-center justify-center rounded transition hover:scale-125"
+                    key={key}
+                  >
+                    <Icon size={36} />
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>

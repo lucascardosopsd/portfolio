@@ -88,7 +88,7 @@ const Budget = ({ titlesData }: ContactProps) => {
           subtitle={titles.description[lang]}
         />
 
-        <Link href={socialLinks[1].url}>
+        <Link href={socialLinks.whatsapp.url}>
           <Button
             variant="outline"
             className="rounded gap-2 border-zinc-700 text-zinc-500"

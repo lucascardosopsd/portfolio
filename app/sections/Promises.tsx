@@ -74,7 +74,7 @@ const Promises = ({ titlesData, promisesData }: PromissesProps) => {
             ))}
           </div>
           <div className="flex items-center justify-center flex-1">
-            <Link href={socialLinks[1].url}>
+            <Link href={socialLinks.whatsapp.url}>
               <Button variant="outline" className="rounded w-full">
                 Orçamento
               </Button>

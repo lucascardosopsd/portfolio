@@ -22,15 +22,21 @@ const Footer = () => {
           </ul>
         </nav>
         <div className="flex gap-3">
-          {socialLinks.map((link, index) => (
-            <a
-              href={link.url}
-              key={index}
-              className="w-10 h-10 bg-purple text-peach flex items-center justify-center rounded"
-            >
-              <link.icon size={24} />
-            </a>
-          ))}
+          {Object.keys(socialLinks).map((key: string) => {
+            const url = socialLinks[key].url;
+            const Icon = socialLinks[key].icon;
+
+            return (
+              <Link
+                target="_blank"
+                href={url}
+                className="w-10 h-10 bg-purple text-white flex items-center justify-center rounded transition hover:scale-125"
+                key={key}
+              >
+                <Icon size={36} />
+              </Link>
+            );
+          })}
         </div>
       </div>
 

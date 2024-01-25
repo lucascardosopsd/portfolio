@@ -3,6 +3,8 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import LinkedinIcon from "@/components/icons/Linkedin";
 import WhatsappIcon from "@/components/icons/Whatsapp";
 import GitHubIcon from "@/components/icons/Github";
+import { SocialLinksProps } from "@/types/socialLinks";
+import { IconType } from "react-icons";
 
 export const navLinks = [
   {
@@ -49,23 +51,20 @@ export const navLinks = [
   },
 ];
 
-export const socialLinks = [
-  {
-    id: 1,
-    icon: GitHubIcon,
+export const socialLinks: SocialLinksProps = {
+  github: {
+    icon: GitHubIcon as IconType,
     url: "https://github.com/lucascardosopsd",
   },
-  {
-    id: 2,
-    icon: LinkedinIcon,
+  linkedin: {
+    icon: LinkedinIcon as IconType,
     url: "https://www.linkedin.com/in/lcpsd/",
   },
-  {
-    id: 3,
-    icon: WhatsappIcon,
+  whatsapp: {
+    icon: WhatsappIcon as IconType,
     url: "https://api.whatsapp.com/send?phone=5517996484654",
   },
-];
+};
 
 export const contactDetails = [
   {
