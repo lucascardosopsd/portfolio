@@ -91,9 +91,12 @@ const Budget = ({ titlesData }: ContactProps) => {
         <Link href={socialLinks.whatsapp.url}>
           <Button
             variant="outline"
-            className="rounded gap-2 border-zinc-700 text-zinc-500"
+            className="rounded gap-2 border-zinc-700 text-zinc-500 group hover:text-white group hover:border-white"
           >
-            <WhatsappIcon color="#71717a" />
+            <WhatsappIcon
+              className="stroke-zinc-500 group-hover:stroke-white transition"
+              strokeWidth={2}
+            />
             <p className="font-light">Whatsapp</p>
           </Button>
         </Link>

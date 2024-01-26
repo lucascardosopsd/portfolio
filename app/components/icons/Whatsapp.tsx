@@ -3,6 +3,7 @@ interface WhatsappIconProps {
   color?: string;
   strokeWidth?: number;
   fill?: string;
+  className?: string;
 }
 
 const WhatsappIcon = ({
@@ -10,6 +11,7 @@ const WhatsappIcon = ({
   color = "#ffff",
   strokeWidth,
   fill,
+  className,
 }: WhatsappIconProps) => {
   return (
     <svg
@@ -26,6 +28,7 @@ const WhatsappIcon = ({
         strokeLinejoin="round"
         strokeWidth={strokeWidth}
         fill={fill}
+        className={className}
       />
     </svg>
   );
