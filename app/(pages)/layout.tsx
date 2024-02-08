@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Lucas Cardoso | Desenvolvedor",
     description:
       "Desenvolvimento de sites e aplicações com as tecnologias mais modernas.",
-    url: "https://kellyalves.vercel.app/",
+    url: "https://lucascardoso.vercel.app/",
     siteName: "Lucas Cardoso",
     images: [
       {
