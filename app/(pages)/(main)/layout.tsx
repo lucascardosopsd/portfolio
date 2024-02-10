@@ -3,6 +3,7 @@ import { ReactNode, useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { usePathname, useSearchParams } from "next/navigation";
+import WppFloatingButton from "@/components/WppFloatingButton";
 
 const layout = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
@@ -20,6 +21,7 @@ const layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header />
+      <WppFloatingButton />
       <main>{children}</main>
       <Footer />
     </>
