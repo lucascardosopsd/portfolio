@@ -12,7 +12,7 @@ const WppFloatingButton = () => {
         href="https://api.whatsapp.com/send?phone=5517996484654"
         className="relative"
       >
-        <div className="flex items-center justify-center border border-border bg-background text-red rounded h-32 w-16 flex-col gap-2">
+        <div className="flex items-center justify-center border border-border bg-zinc-900 text-red rounded h-32 w-16 flex-col gap-2 z-10">
           <PiWhatsappLogoThin className="text-3xl" />
           <p className="text-xs text-center">
             {lang == "pt" ? "Fale comigo" : "Text to me"}
