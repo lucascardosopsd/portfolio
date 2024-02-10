@@ -34,12 +34,12 @@ export default {
         {
           title: "Português",
           name: "pt",
-          type: "string",
+          type: "text",
         },
         {
           title: "Inglês",
           name: "en",
-          type: "string",
+          type: "text",
         },
       ],
     },
