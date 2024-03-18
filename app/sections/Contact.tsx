@@ -90,10 +90,10 @@ const Budget = ({ titlesData }: ContactProps) => {
         <Link href="/successwhatsapp">
           <Button
             variant="outline"
-            className="rounded gap-2 border-zinc-700 text-zinc-500 group hover:text-white group hover:border-white"
+            className="rounded gap-2 border-green-500 text-green-500 group hover:text-white group hover:border-white"
           >
             <WhatsappIcon
-              className="stroke-zinc-500 group-hover:stroke-white transition"
+              className="stroke-green-500 group-hover:stroke-white transition"
               strokeWidth={2}
             />
             <p className="font-light">Whatsapp</p>
