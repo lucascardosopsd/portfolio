@@ -1,3 +1,5 @@
+"use client";
+
 import { socialLinks } from "@/constants";
 import { redirect } from "next/navigation";
 
