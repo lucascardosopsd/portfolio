@@ -22,7 +22,6 @@ import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 import WhatsappIcon from "@/components/icons/Whatsapp";
 import Link from "next/link";
-import { socialLinks } from "@/constants";
 
 interface ContactProps {
   titlesData: TitlesData[];
@@ -88,7 +87,7 @@ const Budget = ({ titlesData }: ContactProps) => {
           subtitle={titles.description[lang]}
         />
 
-        <Link href={socialLinks.whatsapp.url}>
+        <Link href="/successwhatsapp">
           <Button
             variant="outline"
             className="rounded gap-2 border-zinc-700 text-zinc-500 group hover:text-white group hover:border-white"

@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { usePathname, useSearchParams } from "next/navigation";
 import WppFloatingButton from "@/components/WppFloatingButton";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const layout = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
@@ -24,6 +25,8 @@ const layout = ({ children }: { children: ReactNode }) => {
       <WppFloatingButton />
       <main>{children}</main>
       <Footer />
+
+      <GoogleTagManager gtmId="AW-16498945597" />
     </>
   );
 };
