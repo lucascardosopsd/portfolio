@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   openGraph: {
-    title: "Lucas Cardoso | Desenvolvedor",
+    title: "Lucas Cardoso | Desenvolvedor Full Stack JS",
     description:
       "Desenvolvimento de sites e aplicações com as tecnologias mais modernas.",
     url: "https://lucascardoso.vercel.app/",
