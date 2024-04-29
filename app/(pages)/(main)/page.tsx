@@ -23,13 +23,13 @@ export default async function Home() {
   const techsData = await getTechs();
 
   return (
-    <>
+    <div className="text-zinc-100">
       <Hero data={heroData[0]} titlesData={titlesData} />
       <Promises promisesData={promisesData} titlesData={titlesData} />
       <Portfolio portfolioData={portfolioData} titlesData={titlesData} />
       <Techs techsData={techsData} titlesData={titlesData} />
       <Faq faqData={faqData} titlesData={titlesData} />
       <Contact titlesData={titlesData} />
-    </>
+    </div>
   );
 }
