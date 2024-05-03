@@ -23,7 +23,7 @@ export default async function Home() {
   const techsData = await getTechs();
 
   return (
-    <div className="text-zinc-100">
+    <div>
       <Hero data={heroData[0]} titlesData={titlesData} />
       <Promises promisesData={promisesData} titlesData={titlesData} />
       <Portfolio portfolioData={portfolioData} titlesData={titlesData} />
