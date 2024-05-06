@@ -27,31 +27,17 @@ const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
   return (
     <FadeDiv>
       <section
-        className="section-padding max-width border-t border-zinc-600 relative "
+        className="section-padding max-width border-t border-zinc-600 relative dark:bg-grid-white/[0.05] bg-grid-black/[0.05]"
         id={sectionId}
         ref={ref}
       >
-        <Image
-          src="/images/illustration-1.svg"
-          alt="Illustration"
-          height={0}
-          width={0}
-          sizes="100vh"
-          className="h-[300px] w-auto absolute left-20 top-40 hidden tablet:block"
-        />
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-zinc-950 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,#030712)]" />
 
-        <Image
-          src="/images/illustration-2.svg"
-          alt="Illustration"
-          height={0}
-          width={0}
-          sizes="100vh"
-          className="h-[300px] w-auto absolute right-20 bottom-40 hidden tablet:block"
-        />
         <SectionHeading
           title={titles.title[lang]}
           subtitle={titles.description[lang]}
         />
+
         <div className="flex flex-col items-center w-full">
           <div className="grid grid-cols-1 tablet:grid-cols-2 gap-8">
             {portfolioData.map((project, index) => (
@@ -59,14 +45,6 @@ const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
                 className="relative border border-zinc-600 p-4 rounded bg-zinc-900"
                 key={index}
               >
-                <Image
-                  src="/images/illustration-3.svg"
-                  alt="Project"
-                  height={0}
-                  width={0}
-                  sizes="100vh"
-                  className="h-[300px] w-auto absolute -left-16  bottom-0 top-0 my-auto hidden tablet:block -z-10"
-                />
                 <div className="flex flex-col mb-8">
                   <Link href={project.link} key={index}>
                     <Image
