@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://lucascardoso.vercel.app/sitemap.xml
