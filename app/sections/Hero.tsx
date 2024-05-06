@@ -3,11 +3,9 @@ import { watchInView } from "@/tools/watchInView";
 import Image from "next/image";
 import { useRef } from "react";
 import FadeDiv from "@/components/FadeDiv";
-import { socialLinks } from "@/constants";
 import { getLang } from "@/tools/getLang";
 import { HeroDataProps } from "@/types/hero";
 import { TitlesData } from "@/types/titles";
-import Link from "next/link";
 
 interface HeroProps {
   data: HeroDataProps;
@@ -57,7 +55,7 @@ const Hero = ({ data, titlesData }: HeroProps) => {
             <p className="text-zinc-300">{titleLeft.description[lang]}</p>
           </div>
 
-          <div className="flex flex-col space-y-4">
+          {/* <div className="flex flex-col space-y-4">
             <div className="flex justify-center tablet:justify-start gap-4">
               {Object.keys(socialLinks).map((key: string) => {
                 const url = socialLinks[key].url;
@@ -75,7 +73,7 @@ const Hero = ({ data, titlesData }: HeroProps) => {
                 );
               })}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Center */}
@@ -103,7 +101,7 @@ const Hero = ({ data, titlesData }: HeroProps) => {
             </p>
           </div>
 
-          <div className="flex flex-col tablet:flex-row gap-2">
+          {/* <div className="flex flex-col tablet:flex-row gap-2">
             {data.highlights.map((highlight, index) => (
               <div className="flex flex-col gap-2" key={index}>
                 <p className="p-2 rounded border border-zinc-600 text-center tablet:text-end">
@@ -114,7 +112,7 @@ const Hero = ({ data, titlesData }: HeroProps) => {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
     </FadeDiv>
