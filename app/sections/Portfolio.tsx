@@ -31,7 +31,7 @@ const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
         id={sectionId}
         ref={ref}
       >
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-zinc-950 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,#030712)]" />
+        <div className="absolute -z-20 pointer-events-none inset-0 flex items-center justify-center dark:bg-zinc-950 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,#030712)]" />
 
         <SectionHeading
           title={titles.title[lang]}
