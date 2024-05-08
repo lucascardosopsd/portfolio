@@ -36,6 +36,7 @@ const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
         <SectionHeading
           title={titles.title[lang]}
           subtitle={titles.description[lang]}
+          classname="z-10"
         />
 
         <div className="flex flex-col items-center w-full">
