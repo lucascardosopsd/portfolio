@@ -3,7 +3,6 @@ import MobileMenu from "./MobileMenu";
 import { navLinks } from "../constants";
 import Headroom from "react-headroom";
 import { getLang } from "@/tools/getLang";
-import Link from "next/link";
 
 const Header = () => {
   const lang = getLang();
@@ -20,7 +19,7 @@ const Header = () => {
                     <NavLink href={link.url} label={link.label[lang]} />
                   </li>
                 ))}
-                <Link
+                {/* <Link
                   href="https://api.whatsapp.com/send?phone=5517996484654"
                   target="_blank"
                 >
@@ -29,7 +28,7 @@ const Header = () => {
                       {lang == "en" ? "Budget" : "Orçamento"}
                     </button>
                   </li>
-                </Link>
+                </Link> */}
               </ul>
             </nav>
           </header>

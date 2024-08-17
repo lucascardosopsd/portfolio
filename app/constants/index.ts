@@ -14,13 +14,13 @@ export const navLinks = [
     },
     url: "#hero",
   },
-  {
-    label: {
-      pt: "Escopo",
-      en: "Scope",
-    },
-    url: "#promises",
-  },
+  // {
+  //   label: {
+  //     pt: "Escopo",
+  //     en: "Scope",
+  //   },
+  //   url: "#promises",
+  // },
   {
     label: {
       pt: "Portfolio",
@@ -35,13 +35,13 @@ export const navLinks = [
     },
     url: "#techs",
   },
-  {
-    label: {
-      pt: "Faq",
-      en: "Faq",
-    },
-    url: "#faq",
-  },
+  // {
+  //   label: {
+  //     pt: "Faq",
+  //     en: "Faq",
+  //   },
+  //   url: "#faq",
+  // },
   {
     label: {
       pt: "Contato",
