@@ -32,7 +32,11 @@ const Header = () => {
                 </Link> */}
 
                 <Link
-                  href="https://docs.google.com/document/d/1cH0bs2Guzfi3DSgWF824bJSkHivryozbp-dcBT_7Ah0/"
+                  href={
+                    lang == "en"
+                      ? "https://docs.google.com/document/d/1n3v2YVbTR9mK8-eCR-CQFOc5bkTu3htdiVPVLwlKlQE/"
+                      : "https://docs.google.com/document/d/1cH0bs2Guzfi3DSgWF824bJSkHivryozbp-dcBT_7Ah0/"
+                  }
                   target="_blank"
                 >
                   <li>
