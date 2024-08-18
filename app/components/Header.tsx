@@ -3,6 +3,7 @@ import MobileMenu from "./MobileMenu";
 import { navLinks } from "../constants";
 import Headroom from "react-headroom";
 import { getLang } from "@/tools/getLang";
+import Link from "next/link";
 
 const Header = () => {
   const lang = getLang();
@@ -29,6 +30,17 @@ const Header = () => {
                     </button>
                   </li>
                 </Link> */}
+
+                <Link
+                  href="https://docs.google.com/document/d/1cH0bs2Guzfi3DSgWF824bJSkHivryozbp-dcBT_7Ah0/"
+                  target="_blank"
+                >
+                  <li>
+                    <button className="btn btn-primary">
+                      {lang == "en" ? "curriculum" : "Currículo"}
+                    </button>
+                  </li>
+                </Link>
               </ul>
             </nav>
           </header>
