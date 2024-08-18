@@ -30,8 +30,8 @@ export const navLinks = [
   },
   {
     label: {
-      pt: "Techs",
-      en: "Techs",
+      pt: "Tecnologias",
+      en: "Stack",
     },
     url: "#techs",
   },
