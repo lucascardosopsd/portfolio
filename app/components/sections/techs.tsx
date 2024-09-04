@@ -6,6 +6,7 @@ import { watchInView } from "@/tools/watchInView";
 import { TitlesData } from "@/types/titles";
 import Image from "next/image";
 import { useRef } from "react";
+import { Card, CardHeader } from "../ui/card";
 
 interface TechsDataProps {
   order: number;
@@ -33,7 +34,7 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
   return (
     <FadeDiv>
       <section
-        className="section-padding max-width border-t border-zinc-600 relative"
+        className="section-padding max-width border border-border relative"
         id={sectionId}
         ref={ref}
       >
@@ -64,26 +65,25 @@ const Techs = ({ titlesData, techsData }: TechsProps) => {
           {techsData
             .sort((a, b) => a.order - b.order)
             .map((tech, index) => (
-              <div
+              <Card
                 key={index}
-                className="box transition flex flex-col items-center gap-5 hover:border-zinc-800"
+                className="border border-border aspect-square hover:border-foreground transition"
               >
-                <div className="w-20 h-20 flex items-center justify-center flex-shrink-0 mb-2 relative">
+                <CardHeader className="justify-center items-center h-full">
                   <Image
                     src={tech.logo.asset.url}
                     alt={tech.title}
                     height={0}
                     width={0}
                     sizes="100vh"
-                    className="h-full w-full object-fill"
+                    className="h-20 w-20 object-fill mx-auto"
                   />
-                </div>
-                <div className="flex items-center justify-center h-10">
-                  <p className="text-zinc-100 text-lg font-light">
-                    {tech.title}
-                  </p>
-                </div>
-              </div>
+
+                  <div className="flex items-center justify-center h-10">
+                    <p className="text-lg font-semibold">{tech.title}</p>
+                  </div>
+                </CardHeader>
+              </Card>
             ))}
         </div>
       </section>

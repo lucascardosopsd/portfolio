@@ -1,16 +1,14 @@
 "use client";
 import FadeDiv from "@/components/FadeDiv";
 import SectionHeading from "@/components/SectionHeading";
-import { Button } from "@/components/ui/button";
-import { socialLinks } from "@/constants";
 import { getLang } from "@/tools/getLang";
 import { watchInView } from "@/tools/watchInView";
 import { PromisesDataProps } from "@/types/promises";
 import { TitlesData } from "@/types/titles";
 import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
 import { IoMdCheckmark } from "react-icons/io";
+import { Card, CardContent, CardHeader } from "../ui/card";
 
 interface TechsDataProps {
   order: number;
@@ -38,7 +36,7 @@ const Promises = ({ titlesData, promisesData }: PromissesProps) => {
   return (
     <FadeDiv>
       <section
-        className="section-padding max-width border-t border-zinc-600 flex flex-col justify-center items-center relative"
+        className="section-padding max-width border-t flex flex-col justify-center items-center relative"
         id={sectionId}
         ref={ref}
       >
@@ -60,27 +58,27 @@ const Promises = ({ titlesData, promisesData }: PromissesProps) => {
           className="h-[200px] w-auto absolute right-10 bottom-10 hidden tablet:block -z-10"
         />
 
-        <SectionHeading
-          title={titles.title[lang]}
-          subtitle={titles.description[lang]}
-        />
-        <div className="flex flex-col items-center tablet:flex-row border border-zinc-200 rounded w-full max-w-[800px] p-10 gap-4 tablet:gap-2 bg-zinc-900">
-          <div className="grid grid-cols-1 mobile:grid-cols-2 flex-[2]">
-            {promisesData.map((promise, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <IoMdCheckmark />
-                <p>{promise.title[lang]}</p>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-center justify-center flex-1">
-            <Link href={socialLinks.whatsapp.url}>
-              <Button variant="outline" className="rounded w-full">
-                Orçamento
-              </Button>
-            </Link>
-          </div>
-        </div>
+        <Card>
+          <CardHeader>
+            <div>
+              <SectionHeading
+                title={titles.title[lang]}
+                subtitle={titles.description[lang]}
+              />
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 mobile:grid-cols-2 flex-[2]">
+              {promisesData.map((promise, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <IoMdCheckmark />
+                  <p>{promise.title[lang]}</p>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
         <p className="max-w-[800px] text-center text-sm text-zinc-500 mt-4">
           {lang == "pt"
             ? "A autenticação depende da necessidade da aplicação | O suporte é para problemas relacionados ao desenvolvimento e hospedagem | O CMS será necessário dependendo do tipo de aplicação."

@@ -4,15 +4,16 @@ import { navLinks } from "../constants";
 import Headroom from "react-headroom";
 import { getLang } from "@/tools/getLang";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
-const Header = () => {
+const Navbar = () => {
   const lang = getLang();
 
   return (
     <>
       <div className="flex w-full items-center">
         <Headroom className="w-full hidden tablet:block">
-          <header className="flex items-center justify-center h-20 max-width w-full z-10 bg-zinc-900">
+          <header className="flex items-center justify-center h-20 max-width w-full z-10 bg-background/75 backdrop-blur-lg">
             <nav className="flex items-center gap-12 max-tablet:hidden">
               <ul className="flex items-center gap-8">
                 {navLinks.map((link, index) => (
@@ -20,17 +21,15 @@ const Header = () => {
                     <NavLink href={link.url} label={link.label[lang]} />
                   </li>
                 ))}
-                {/* <Link
+                <span className="h-10 w-[1px] bg-muted-foreground" />
+                <Link
                   href="https://api.whatsapp.com/send?phone=5517996484654"
                   target="_blank"
                 >
                   <li>
-                    <button className="btn btn-primary">
-                      {lang == "en" ? "Budget" : "Orçamento"}
-                    </button>
+                    <Button>{lang == "en" ? "Budget" : "Orçamento"}</Button>
                   </li>
-                </Link> */}
-
+                </Link>
                 <Link
                   href={
                     lang == "en"
@@ -40,9 +39,7 @@ const Header = () => {
                   target="_blank"
                 >
                   <li>
-                    <button className="btn btn-primary">
-                      {lang == "en" ? "curriculum" : "Currículo"}
-                    </button>
+                    <Button>{lang == "en" ? "curriculum" : "Currículo"}</Button>
                   </li>
                 </Link>
               </ul>
@@ -57,4 +54,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

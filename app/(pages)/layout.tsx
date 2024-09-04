@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Theme from "../components/ThemeProvider";
+import { ThemeProvider } from "../components/ThemeProvider";
 import { Toaster } from "@/components/ui/toaster";
 
 const poppins = Poppins({
@@ -42,7 +42,14 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="!scroll-smooth" suppressHydrationWarning>
       <body className={poppins.className}>
-        <Theme>{children}</Theme>
+        <ThemeProvider
+          attribute="class"
+          disableTransitionOnChange
+          enableSystem={false}
+          defaultTheme="dark"
+        >
+          {children}
+        </ThemeProvider>
         <Toaster />
       </body>
     </html>
