@@ -103,7 +103,7 @@ const Budget = ({ titlesData }: ContactProps) => {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-8 max-w-[600px] mx-auto w-full"
+            className="flex flex-col gap-5 max-w-[600px] mx-auto w-full"
           >
             <FormField
               control={form.control}
@@ -124,7 +124,7 @@ const Budget = ({ titlesData }: ContactProps) => {
               )}
             />
 
-            <div className="flex flex-col tablet:flex-row items-center gap-4 w-full border border-zinc-600 rounded p-4 tablet:border-none tablet:p-0">
+            <div className="flex items-center gap-5">
               <FormField
                 control={form.control}
                 name="phone"
@@ -147,7 +147,9 @@ const Budget = ({ titlesData }: ContactProps) => {
                   </FormItem>
                 )}
               />
-              <p>{lang == "pt" ? "ou" : "or"}</p>
+
+              <p className="mt-8">{lang == "pt" ? "ou" : "or"}</p>
+
               <FormField
                 control={form.control}
                 name="email"
@@ -186,7 +188,12 @@ const Budget = ({ titlesData }: ContactProps) => {
               )}
             />
 
-            <Button type="submit" variant="outline" disabled={loading}>
+            <Button
+              type="submit"
+              variant="outline"
+              disabled={loading}
+              className="w-full"
+            >
               {lang == "pt" ? "Enviar" : "Send"}
             </Button>
           </form>
