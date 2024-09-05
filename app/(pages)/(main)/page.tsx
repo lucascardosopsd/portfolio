@@ -25,8 +25,8 @@ export default async function Home() {
   return (
     <div>
       <Hero data={heroData[0]} titlesData={titlesData} />
-      <Promises promisesData={promisesData} titlesData={titlesData} />
       <Portfolio portfolioData={portfolioData} titlesData={titlesData} />
+      <Promises promisesData={promisesData} titlesData={titlesData} />
       <Techs techsData={techsData} titlesData={titlesData} />
       <Faq faqData={faqData} titlesData={titlesData} />
       <Contact titlesData={titlesData} />
