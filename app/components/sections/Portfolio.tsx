@@ -51,7 +51,7 @@ const Portfolio = ({ titlesData, portfolioData }: PortfolioProps) => {
                       height={0}
                       width={0}
                       sizes="4000px"
-                      className="h-[300px] w-full tablet:w-auto object-cover object-top tablet:object-center rounded z-10 border border-transparent transition hover:border-white"
+                      className="h-[300px] w-full tablet:w-auto object-cover object-top tablet:object-cover rounded z-10 border border-transparent transition hover:border-white mx-auto"
                     />
                   </Link>
                 </CardHeader>
